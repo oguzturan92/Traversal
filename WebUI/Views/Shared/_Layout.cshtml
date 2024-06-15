@@ -1,23 +1,23 @@
 ﻿<!doctype html>
-<html lang="zxx">
+<html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Traversal Travel Category Bootstrap Responsive Template | Home :: W3layouts</title>
+    <title>Traversal Travel Category Bootstrap Responsive Template | Home </title>
     <!-- google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!-- google fonts -->
     <!-- Template CSS -->
-    <link rel="stylesheet" href="/Template/css/style-starter.css">
+    <link rel="stylesheet" href="/Template/css/style-liberty.css">
     <!-- Template CSS -->
 </head>
 <body>
-    
+
     @await Component.InvokeAsync("Header");
 
-     @RenderBody()
+    @RenderBody()
 
     @await Component.InvokeAsync("Footer");
 
@@ -64,7 +64,6 @@
         $('.counter').countUp();
     </script>
     <!-- //stats number counter -->
-
     <!--/MENU-JS-->
     <script>
         $(window).on("scroll", function () {
@@ -79,17 +78,17 @@
 
         //Main navigation Active Class Add Remove
         $(".navbar-toggler").on("click", function () {
-            $("header").toggleClass("active");
-            });
-            $(document).on("ready", function () {
+        $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
             if ($(window).width() > 991) {
-                $("header").removeClass("active");
+            $("header").removeClass("active");
             }
-            $(window).on("resize", function () {
-                if ($(window).width() > 991) {
-                $("header").removeClass("active");
-                }
-            });
+        });
         });
     </script>
     <!--//MENU-JS-->

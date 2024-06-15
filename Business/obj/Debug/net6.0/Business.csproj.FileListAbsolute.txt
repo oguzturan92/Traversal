@@ -1,0 +1,17 @@
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\Business.deps.json
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\Business.dll
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\ref\Business.dll
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\Business.pdb
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\Data.dll
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\Entity.dll
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\Data.pdb
+C:\Users\proje\Traversal\Business\bin\Debug\net6.0\Entity.pdb
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.csproj.AssemblyReference.cache
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.AssemblyInfoInputs.cache
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.AssemblyInfo.cs
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.csproj.CopyComplete
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.dll
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\ref\Business.dll
+C:\Users\proje\Traversal\Business\obj\Debug\net6.0\Business.pdb

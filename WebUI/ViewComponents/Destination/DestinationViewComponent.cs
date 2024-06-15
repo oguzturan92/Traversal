@@ -6,7 +6,7 @@ using Business.Concrete;
 using Data.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebUI.ViewComponents.Home
+namespace WebUI.ViewComponents.Destination
 {
     public class DestinationViewComponent : ViewComponent
     {

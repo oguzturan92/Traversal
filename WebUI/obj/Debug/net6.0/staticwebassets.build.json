@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UgIlbv1bT+qAvLLbrhrwdTPknwdj3wVbQ28yy177Z9k=",
+  "Hash": "RWdRGFudOw45DUXarg76+GVz4gFa5AqxJ6qRjy1x9TU=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -1037,12 +1037,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\Template\\css\\style-starter.css",
+      "Identity": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\Template\\css\\style-liberty.css",
       "SourceId": "WebUI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\",
       "BasePath": "_content/WebUI",
-      "RelativePath": "Template/css/style-starter.css",
+      "RelativePath": "Template/css/style-liberty.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1051,7 +1051,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Template\\css\\style-starter.css"
+      "OriginalItemSpec": "wwwroot\\Template\\css\\style-liberty.css"
     },
     {
       "Identity": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\Template\\fonts\\fontawesome-webfont.eot",

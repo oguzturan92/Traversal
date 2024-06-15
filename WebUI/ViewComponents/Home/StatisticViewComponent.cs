@@ -10,10 +10,8 @@ namespace WebUI.ViewComponents.Home
 {
     public class StatisticViewComponent : ViewComponent
     {
-        // SliderManager _sliderManager = new SliderManager(new SliderDal());
         public IViewComponentResult Invoke()
         {
-            // var values = _sliderManager.GetAll();
             return View();
         }
     }
