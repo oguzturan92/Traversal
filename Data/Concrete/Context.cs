@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Entity.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Concrete
 {
-    public class Context : DbContext
+    public class Context : IdentityDbContext<AppUser, AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder
-            
-            .UseSqlServer(@"Server=.\SQLEXPRESS;Database=Traversal;Integrated Security=True;");
+            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=Traversal;Integrated Security=True;");
         }
 
         public DbSet<About> Abouts { get; set; }

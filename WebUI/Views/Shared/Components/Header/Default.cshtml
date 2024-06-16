@@ -3,7 +3,7 @@
 <header id="site-header" class="fixed-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg stroke">
-            <h1><a class="navbar-brand mr-lg-5" href="index.html">Traversal</a></h1>
+            <h1><a class="navbar-brand mr-lg-5" asp-controller="Home" asp-action="Index">Traversal</a></h1>
             <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -24,6 +24,15 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Contact" asp-action="Index">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="" asp-action="">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="User" asp-action="UserLogin">Giriş Yap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="Member" asp-controller="Home" asp-action="Index">Hesabım</a>
                     </li>
                 </ul>
             </div>

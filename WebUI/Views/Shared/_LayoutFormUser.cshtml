@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>@ViewData["Title"]</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/TemplateFormUser/css/roboto-font.css">
+	<link rel="stylesheet" type="text/css" href="/TemplateFormUser/fonts/font-awesome-5/css/fontawesome-all.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="/TemplateFormUser/css/style.css"/>
+	<!-- Sweetalert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body class="form-v5">
+	<div class="page-content">
+		<div class="form-v5-content">
+            @RenderBody()
+		</div>
+	</div>
+	<script>
+		if ("@TempData["text"]" != "")
+		{
+			Swal.fire({
+				position: "center",
+				icon: "@TempData["icon"]",
+				html: "@TempData["text"]",
+				showConfirmButton: false,
+				timer: 1500
+			});
+		}
+	</script>
+</body>
+</html>

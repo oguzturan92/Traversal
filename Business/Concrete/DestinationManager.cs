@@ -36,6 +36,11 @@ namespace Business.Concrete
             return _destinationDal.GetById(id);
         }
 
+        public Destination GetDestination(int id)
+        {
+            return _destinationDal.GetDestination(id);
+        }
+
         public void Update(Destination entity)
         {
             _destinationDal.Update(entity);

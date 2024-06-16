@@ -2050,6 +2050,7 @@
       "Business >= 1.0.0",
       "Data >= 1.0.0",
       "Entity >= 1.0.0",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.0",
       "Newtonsoft.Json >= 13.0.3"
     ]
   },
@@ -2104,6 +2105,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"

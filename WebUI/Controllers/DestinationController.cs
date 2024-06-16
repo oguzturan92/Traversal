@@ -21,7 +21,7 @@ namespace WebUI.Controllers
         [HttpGet]
         public IActionResult DestinationDetail(int id)
         {
-            var value = _destinationManager.GetById(id);
+            var value = _destinationManager.GetDestination(id);
             return View(value);
         }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Traversal Travel Category Bootstrap Responsive Template | Home </title>
+    <title>@ViewData["Title"]</title>
     <!-- google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
@@ -12,14 +12,29 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="/Template/css/style-liberty.css">
     <!-- Template CSS -->
+	<!-- Sweetalert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
-    @await Component.InvokeAsync("Header");
+    @await Component.InvokeAsync("Header")
 
     @RenderBody()
 
-    @await Component.InvokeAsync("Footer");
+    @await Component.InvokeAsync("Footer")
+
+	<script>
+		if ("@TempData["text"]" != "")
+		{
+			Swal.fire({
+				position: "center",
+				icon: "@TempData["icon"]",
+				html: "@TempData["text"]",
+				showConfirmButton: false,
+				timer: 1500
+			});
+		}
+	</script>
 
     <!-- Template JavaScript -->
     <script src="/Template/js/jquery-3.3.1.min.js"></script>

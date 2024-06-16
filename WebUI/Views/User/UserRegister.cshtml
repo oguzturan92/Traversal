@@ -1,0 +1,50 @@
+@model UserRegisterModel
+@{
+    ViewData["Title"] = "UserRegister";
+    Layout = "_LayoutFormUser";
+}
+
+<form class="form-detail" asp-controller="User" asp-action="UserRegister" method="post">
+    <h2>Kayıt Formu</h2>
+    <div class="validation-summary-text" asp-validation-summary="ModelOnly"></div>
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="Name"></span>
+        <label>Ad *</label>
+        <input type="text" asp-for="Name" class="input-text" required>
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="Surname"></span>
+        <label>Soyad *</label>
+        <input type="text" asp-for="Surname" class="input-text" required>
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="UserName"></span>
+        <label>Kullanıcı Adı *</label>
+        <input type="text" asp-for="UserName" class="input-text" required>
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="Email"></span>
+        <label>Email *</label>
+        <input type="email" asp-for="Email"  class="input-text" required>
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="Password"></span>
+        <label >Şifre *</label>
+        <input type="Password" asp-for="Password" class="input-text" required>
+        <i class="fas fa-lock"></i>
+    </div>
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="RePassword"></span>
+        <label >Şifre Tekrar *</label>
+        <input type="Password" asp-for="RePassword" class="input-text" required>
+        <i class="fas fa-lock"></i>
+    </div>
+    <div class="form-row-last">
+        <a asp-controller="User" asp-action="UserLogin" class="login">Giriş Yap</a>
+        <input type="submit" name="register" class="register" value="Kayıt Ol">
+    </div>
+</form>

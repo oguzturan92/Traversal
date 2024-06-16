@@ -1,7 +1,64 @@
+using Data.Concrete;
+using Entity.Concrete;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+    // Identity kullanımı için - Start ------------------------------------------------------------------------------------
+    builder.Services.AddDbContext<Context>();
+    builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
+
+    // Proje Seviyesinde Authorize ---------------------
+    // builder.Services.AddMvc(config => 
+    // {
+    //     var policy = new AuthorizationPolicyBuilder()
+    //     .RequireAuthenticatedUser()
+    //     .Build();
+    //     config.Filters.Add(new AuthorizeFilter(policy));
+    // });
+
+    // IDENTITY AYARLARI - 1
+    builder.Services.Configure<IdentityOptions>(options => {
+
+        // Şifre Ayarları
+        options.Password.RequireDigit = false;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireUppercase = false;
+        // options.Password.RequiredLength = false; // Minimum karakter sayısı.
+        options.Password.RequireNonAlphanumeric = false;
+
+        // Kilitleme Ayarları
+        options.Lockout.MaxFailedAccessAttempts = 5;
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+        options.Lockout.AllowedForNewUsers = true;
+
+        // Mail Ayarları
+        // options.User.AllowedUserNameCharacters = "";
+        options.User.RequireUniqueEmail = true;
+        options.SignIn.RequireConfirmedEmail = false;
+        options.SignIn.RequireConfirmedPhoneNumber = false;
+    });
+
+    // IDENTITY AYARLARI - 2
+    builder.Services.ConfigureApplicationCookie(options => {
+        options.LoginPath = "/User/UserLogin";
+        options.LogoutPath = "/User/Logout";
+        options.AccessDeniedPath = "/User/UserLogin";
+        options.SlidingExpiration = true;
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+        options.Cookie = new CookieBuilder
+        {
+            HttpOnly = true,
+            Name = ".traversal.Security.Cookie",
+            SameSite = SameSiteMode.Strict
+        };
+    });
+    // Identity kullanımı için - Finish ------------------------------------------------------------------------------------
 
 var app = builder.Build();
 
@@ -18,7 +75,17 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+    app.UseAuthentication();
+
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
 
 app.MapControllerRoute(
     name: "default",
