@@ -26,6 +26,7 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult DestinationCreate()
         {
+            ViewBag.destinationActive = "active";
             return View();
         }
 
@@ -41,6 +42,7 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult DestinationUpdate(int id)
         {
+            ViewBag.destinationActive = "active";
             var value = _destinationManager.GetById(id);
             return View(value);
         }

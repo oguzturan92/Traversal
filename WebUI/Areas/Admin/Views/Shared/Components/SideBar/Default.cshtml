@@ -23,10 +23,10 @@
                 <div class="mx-3">Turlar</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a asp-area="Admin" asp-controller="" asp-action="" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div class="mx-3">Cards</div>
+        <li class="menu-item @ViewBag.commentActive">
+            <a asp-area="Admin" asp-controller="Comment" asp-action="CommentList" class="menu-link">
+                <i class="fa-solid fa-comment"></i>
+                <div class="mx-3">Yorumlar</div>
             </a>
         </li>
         <li class="menu-item">

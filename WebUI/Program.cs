@@ -1,4 +1,8 @@
+using Business.Abstract;
+using Business.Concrete;
+using Data.Abstract;
 using Data.Concrete;
+using Data.EntityFramework;
 using Entity.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +17,12 @@ builder.Services.AddControllersWithViews();
     builder.Services.AddDbContext<Context>();
     builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
 
-    // Proje Seviyesinde Authorize ---------------------
+    // Injection için Configure İşlemleri ----------------------------------------------------------------------------------
+    builder.Services.AddScoped<ICommentService, CommentManager>();
+
+    builder.Services.AddScoped<ICommentDal, CommentDal>();
+
+    // Proje Seviyesinde Authorize -----------------------------------------------------------------------------------------
     // builder.Services.AddMvc(config => 
     // {
     //     var policy = new AuthorizationPolicyBuilder()

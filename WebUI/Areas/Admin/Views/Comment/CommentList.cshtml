@@ -1,0 +1,53 @@
+@model List<Comment>
+@{
+    ViewData["Title"] = "CommentList";
+    Layout = "_LayoutAdmin";
+    int count = 1;
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Yorum Listesi</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        @if (Model.Any())
+                        {
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sıra No</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tarih</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
+                                        <th colspan="3"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@count</td>
+                                            <td>@item.CommentDate.ToString("dd MMM yyyy")</td>
+                                            <td>@item.CommentEmail</td>
+                                            <td><a asp-area="" asp-controller="Destination" asp-action="DestinationDetail" asp-route-id="@item.DestinationId" target="_blank" class="btn btn-outline-dark">Sayfada Görüntüle <i style="margin-left: 5px;" class="fa-solid fa-arrow-up-right-from-square"></i></a></td>
+                                            <td><a asp-area="Admin" asp-controller="Comment" asp-action="CommentDetail" asp-route-id="@item.CommentId" class="btn btn-outline-warning">DETAY</a></td>
+                                            <td><a asp-area="Admin" asp-controller="Comment" asp-action="CommentDelete" asp-route-id="@item.CommentId" class="btn btn-outline-danger">SİL</a></td>
+                                        </tr>
+                                        count++;
+                                    }
+                                </tbody>
+                            </table>
+                        } else
+                        {
+                            <div class="alert alert-warning" role="alert">Henüz bir öge mevcut değil</div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

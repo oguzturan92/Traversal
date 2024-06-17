@@ -1,0 +1,44 @@
+@model Comment
+@{
+    ViewData["Title"] = "CommentDetail";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Yorum Detay</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form>
+                        <input type="hidden" asp-for="CommentId">
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="CommentDate"></span>
+                            <label for="CommentDate">Tarih</label>
+                            <input type="text" asp-for="CommentDate" id="CommentDate" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="CommentFullname"></span>
+                            <label for="CommentFullname">Ad Soyad</label>
+                            <input type="text" asp-for="CommentFullname" id="CommentFullname" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="CommentContent"></span>
+                            <label for="CommentContent">Yorum</label>
+                            <input type="text" asp-for="CommentContent" id="CommentContent" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="CommentEmail"></span>
+                            <label for="CommentEmail">Email</label>
+                            <input type="text" asp-for="CommentEmail" id="CommentEmail" class="form-control" disabled>
+                        </div>
+                        <a asp-area="Admin" asp-controller="Comment" asp-action="CommentList" class="btn btn-outline-dark mt-4">Geri</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -19,6 +19,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Comment/CommentDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxDb21tZW50RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Comment/CommentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxDb21tZW50TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Destination/DestinationCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzdGluYXRpb25cRGVzdGluYXRpb25DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
