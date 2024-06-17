@@ -243,6 +243,15 @@ a:-moz-placeholder { /* Firefox 18- */
   font-size: 16px;
 }
 
+.form-home-icon {
+	color: #333;
+	position: absolute;
+	left: 50%;
+	top: 1%;
+	width: auto!important;
+	transform: translate(-50%, 0%);
+}
+
 .validation-text {
 	color: #ff0000;
 	font-size: 14px;

@@ -16,5 +16,6 @@ namespace Entity.Concrete
         public bool DestinationStatus { get; set; }
         public int DestinationCapacity { get; set; }
         public List<Comment> Comments { get; set; }
+        public List<Reservation> Reservations { get; set; }
     }
 }

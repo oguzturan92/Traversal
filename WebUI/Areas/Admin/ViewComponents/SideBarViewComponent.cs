@@ -4,12 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebUI.Areas.Member.Controllers
+namespace WebUI.Areas.Admin.ViewComponents
 {
-    [Area("Member")]
-    public class HomeController : Controller
+    public class SideBarViewComponent : ViewComponent
     {
-        public IActionResult Index()
+        public IViewComponentResult Invoke()
         {
             return View();
         }

@@ -24,6 +24,7 @@ namespace Data.Concrete
         public DbSet<Feature> Features { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Team> Teams { get; set; }

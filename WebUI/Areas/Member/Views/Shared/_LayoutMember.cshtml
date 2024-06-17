@@ -25,15 +25,28 @@
 
 <body class="g-sidenav-show bg-gray-100">
 
-    @await Component.InvokeAsync("SideBar")
+    @await Component.InvokeAsync("WebUI.Areas.Member.ViewComponents.SideBar")
 
     <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
         
-        @await Component.InvokeAsync("Navbar")
+        @await Component.InvokeAsync("WebUI.Areas.Member.ViewComponents.Navbar")
 
         @RenderBody()
 
     </div>
+    
+	<script>
+		if ("@TempData["text"]" != "")
+		{
+			Swal.fire({
+				position: "center",
+				icon: "@TempData["icon"]",
+				html: "@TempData["text"]",
+				showConfirmButton: false,
+				timer: 1500
+			});
+		}
+	</script>
 
     <!--   Core JS Files   -->
     <script src="/TemplateMember/js/core/popper.min.js"></script>

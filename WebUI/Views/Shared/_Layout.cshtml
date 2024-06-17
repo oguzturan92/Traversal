@@ -17,11 +17,11 @@
 </head>
 <body>
 
-    @await Component.InvokeAsync("Header")
+    @await Component.InvokeAsync("WebUI.ViewComponents.Header")
 
     @RenderBody()
 
-    @await Component.InvokeAsync("Footer")
+    @await Component.InvokeAsync("WebUI.ViewComponents.Footer")
 
 	<script>
 		if ("@TempData["text"]" != "")

@@ -10,24 +10,43 @@
             <div class="card mb-4">
                 <div class="card-header pb-0">
                     <h6>Hesabım</h6>
+                    <hr>
                 </div>
                 <div class="card-body pt-0 p-4">
-                    <form asp-area="Member" asp-controller="Profile" asp-action="ProfileUpdate">
+                    <form asp-area="Member" asp-controller="Profile" asp-action="ProfileUpdate" method="post">
                         <div class="form-group">
-                            <label for="Name">Ad</label>
+                            <span class="validation-text" asp-validation-for="Name"></span>
+                            <label for="Name">Ad *</label>
                             <input type="text" asp-for="Name" id="Name" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="Surname">Soyad</label>
+                            <span class="validation-text" asp-validation-for="Surname"></span>
+                            <label for="Surname">Soyad *</label>
                             <input type="text" asp-for="Surname" id="Surname" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="Email">Email</label>
+                            <span class="validation-text" asp-validation-for="PhoneNumber"></span>
+                            <label for="PhoneNumber">Telefon Numarası *</label>
+                            <input type="text" asp-for="PhoneNumber" id="PhoneNumber" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="City"></span>
+                            <label for="City">Şehir *</label>
+                            <input type="text" asp-for="City" id="City" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Email"></span>
+                            <label for="Email">Email *</label>
                             <input type="text" asp-for="Email" id="Email" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="UserName">Kullanıcı Adı</label>
+                            <span class="validation-text" asp-validation-for="UserName"></span>
+                            <label for="UserName">Kullanıcı Adı * (Değişimi durumunda tekrar giriş gerekir)</label>
                             <input type="text" asp-for="UserName" id="UserName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="OldPassword">Mevcut Şifre</label>
+                            <input type="password" asp-for="OldPassword" id="OldPassword" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="Password">Şifre</label>

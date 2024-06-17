@@ -1,0 +1,62 @@
+@model AppUser
+@{
+    ViewData["Title"] = "ProfileIndex";
+    Layout = "_LayoutMember";
+}
+
+<div class="container-fluid">
+    <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('/TemplateMember/img/curved-images/curved0.jpg'); background-position-y: 50%;">
+        <span class="mask bg-gradient-primary opacity-6"></span>
+    </div>
+    <div class="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
+        <div class="row gx-4">
+            <div class="col-auto">
+                <div class="avatar avatar-xl position-relative">
+                    <img src="/TemplateMember/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+                </div>
+            </div>
+            <div class="col-auto my-auto">
+                <div class="h-100">
+                    <h5 class="mb-1">@Model.Name @Model.Surname</h5>
+                    <p class="mb-0 font-weight-bold text-sm">Software Development</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+                <div class="nav-wrapper position-relative end-0">
+                    <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link mb-0 px-0 py-1 active " data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
+                                <i class="fa-solid fa-laptop"></i>
+                                <span class="ms-1">Site</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="ms-1">Mesajlar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="#" role="tab" aria-selected="false">
+                                <i class="fa-solid fa-wrench"></i>
+                                <span class="ms-1">Ayarlar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-4">
+    <div class="row">
+
+        @await Component.InvokeAsync("ProfileSetting")
+
+        @await Component.InvokeAsync("ProfileInfo")
+
+        @await Component.InvokeAsync("ProfileTeam")
+
+    </div>
+</div>

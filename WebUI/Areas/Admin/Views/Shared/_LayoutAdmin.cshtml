@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/TemplateAdmin/img/favicon/favicon.ico" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/TemplateAdmin/vendor/fonts/boxicons.css" />
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/TemplateAdmin/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="/TemplateAdmin/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="/TemplateAdmin/css/demo.css" />
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="/TemplateAdmin/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="/TemplateAdmin/vendor/libs/apex-charts/apex-charts.css" />
+    <!-- Helpers -->
+    <script src="/TemplateAdmin/vendor/js/helpers.js"></script>
+    <script src="/TemplateAdmin/js/config.js"></script>
+    <!-- Sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.SideBar")
+
+            <div class="layout-page">
+
+                @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.Header")
+
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        @RenderBody()
+                    </div>
+                    <div class="content-backdrop fade"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+
+	<script>
+		if ("@TempData["text"]" != "")
+		{
+			Swal.fire({
+				position: "center",
+				icon: "@TempData["icon"]",
+				html: "@TempData["text"]",
+				showConfirmButton: false,
+				timer: 1500
+			});
+		}
+	</script>
+
+    <script src="/TemplateAdmin/vendor/libs/jquery/jquery.js"></script>
+    <script src="/TemplateAdmin/vendor/libs/popper/popper.js"></script>
+    <script src="/TemplateAdmin/vendor/js/bootstrap.js"></script>
+    <script src="/TemplateAdmin/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/TemplateAdmin/vendor/js/menu.js"></script>
+    <script src="/TemplateAdmin/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="/TemplateAdmin/js/main.js"></script>
+    <script src="/TemplateAdmin/js/dashboards-analytics.js"></script>
+</body>
+</html>

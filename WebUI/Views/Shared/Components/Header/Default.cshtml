@@ -25,14 +25,22 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Contact" asp-action="Index">İletişim</a>
                     </li>
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="User" asp-action="UserLogout">Çıkış Yap</a>
+                        </li>
+                    } else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="User" asp-action="UserLogin">Giriş Yap</a>
+                        </li>
+                    }
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="" asp-action="">Admin</a>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="User" asp-action="UserLogin">Giriş Yap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="Member" asp-controller="Home" asp-action="Index">Hesabım</a>
+                        <a class="nav-link" asp-area="Member" asp-controller="Profile" asp-action="ProfileIndex">Hesabım</a>
                     </li>
                 </ul>
             </div>

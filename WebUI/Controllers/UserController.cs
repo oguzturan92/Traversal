@@ -60,9 +60,12 @@ namespace WebUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult UserLogin()
+        public IActionResult UserLogin(string ReturnUrl = null)
         {
-            return View();
+            var model = new UserLoginModel(){
+                ReturnUrl = ReturnUrl
+            };
+            return View(model);
         }
 
         [HttpPost]
@@ -78,7 +81,7 @@ namespace WebUI.Controllers
                     {
                         TempData["icon"] = "success";
                         TempData["text"] = "Giriş yapıldı.";
-                        return RedirectToAction("Index", "Home");
+                        return Redirect(model.ReturnUrl ?? "~/");
                     } else
                     {
                         ModelState.AddModelError("", "Bir sorun oluştu, lütfen tekrar deneyin.");
@@ -92,7 +95,7 @@ namespace WebUI.Controllers
         public async Task<IActionResult> UserLogout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("UserLogin", "User");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

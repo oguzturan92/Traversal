@@ -5,8 +5,10 @@
 }
 
 <form class="form-detail" asp-controller="User" asp-action="UserLogin" method="post">
+    <a asp-controller="Home" asp-action="Index" class="form-home-icon"><span class="fa-solid fa-house"></span></a>
     <h2>Giriş Formu</h2>
     <div class="validation-summary-text" asp-validation-summary="ModelOnly"></div>
+    <input type="hidden" asp-for="ReturnUrl">
     <div class="form-row">
         <span class="validation-text" asp-validation-for="Email"></span>
         <label>Email *</label>

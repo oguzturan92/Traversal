@@ -1,0 +1,66 @@
+@model List<Reservation>
+@{
+    ViewData["Title"] = "ReservationList";
+    Layout = "_LayoutMember";
+    int count = 1;
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Rezervasyon Listesi</h6>
+                    <hr>
+                </div>
+                <div class="card-header pb-0">
+                    <a class="btn btn-outline-dark" asp-area="Member" asp-controller="Reservation" asp-action="ReservationList">TÜM REZERVASYONLAR</a>
+                    <a class="btn btn-outline-dark" asp-area="Member" asp-controller="Reservation" asp-action="ReservationList" asp-route-status="ONAYLANDI">ONAYLANAN REZERVASYONLAR</a>
+                    <a class="btn btn-outline-dark" asp-area="Member" asp-controller="Reservation" asp-action="ReservationList" asp-route-status="BEKLİYOR">BEKLEYEN REZERVASYONLAR</a>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        @if (Model.Any())
+                        {
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sıra No</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Destinasyon</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tarih</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Durum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@count</td>
+                                            <td>@item.Destination.DestinationCity</td>
+                                            <td>@item.ReservationDate.ToString("dd MMM yyyy")</td>
+                                            @if (item.ReservationStatus == "BEKLİYOR")
+                                            {
+                                                <td> <span class="badge badge-sm bg-gradient-secondary">@item.ReservationStatus</span></td>
+                                            }
+                                            @if (item.ReservationStatus == "ONAYLANDI")
+                                            {
+                                                <td> <span class="badge badge-sm bg-gradient-success">@item.ReservationStatus</span></td>
+                                            }
+                                        </tr>
+                                        count++;
+                                    }
+                                </tbody>
+                            </table>
+                        } else
+                        {
+                            <div class="alert alert-warning" role="alert">Henüz bir öge mevcut değil</div>
+                        }
+                        <hr>
+                        <a asp-area="Member" asp-controller="Reservation" asp-action="ReservationCreate" class="btn btn-info">REZERVASYON OLUŞTUR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

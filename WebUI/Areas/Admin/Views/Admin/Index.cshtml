@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="row">
+
+    @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.Dashboard.Dashboard1")
+
+    @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.Dashboard.Dashboard2")
+
+    @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.Dashboard.Dashboard3")
+
+    @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.Dashboard.Dashboard4")
+
+</div>
+
+<div class="row">
+
+    @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.SubDashboard.SubDashboard1")
+
+    @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.SubDashboard.SubDashboard2")
+
+    @await Component.InvokeAsync("WebUI.Areas.Admin.ViewComponents.SubDashboard.SubDashboard3")
+
+</div>

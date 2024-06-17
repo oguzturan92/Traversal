@@ -35,5 +35,6 @@ namespace WebUI.Models
         
         [Required(ErrorMessage = "Zorunlu alan.")]
         public string Password { get; set; }
+        public string ReturnUrl { get; set; }
     }
 }
