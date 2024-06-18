@@ -18,9 +18,35 @@ builder.Services.AddControllersWithViews();
     builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
 
     // Injection için Configure İşlemleri ----------------------------------------------------------------------------------
+    builder.Services.AddScoped<IAboutService, AboutManager>();
+    builder.Services.AddScoped<IAboutItemService, AboutItemManager>();
+    builder.Services.AddScoped<IAddressService, AddressManager>();
+    builder.Services.AddScoped<IBannerService, BannerManager>();
     builder.Services.AddScoped<ICommentService, CommentManager>();
+    builder.Services.AddScoped<IDestinationService, DestinationManager>();
+    builder.Services.AddScoped<IFeatureService, FeatureManager>();
+    builder.Services.AddScoped<IMessageService, MessageManager>();
+    builder.Services.AddScoped<INewsletterService, NewsletterManager>();
+    builder.Services.AddScoped<IReservationService, ReservationManager>();
+    builder.Services.AddScoped<IRoomService, RoomManager>();
+    builder.Services.AddScoped<ISliderService, SliderManager>();
+    builder.Services.AddScoped<ITeamService, TeamManager>();
+    builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 
+    builder.Services.AddScoped<IAboutDal, AboutDal>();
+    builder.Services.AddScoped<IAboutItemDal, AboutItemDal>();
+    builder.Services.AddScoped<IAddressDal, AddressDal>();
+    builder.Services.AddScoped<IBannerDal, BannerDal>();
     builder.Services.AddScoped<ICommentDal, CommentDal>();
+    builder.Services.AddScoped<IDestinationDal, DestinationDal>();
+    builder.Services.AddScoped<IFeatureDal, FeatureDal>();
+    builder.Services.AddScoped<IMessageDal, MessageDal>();
+    builder.Services.AddScoped<INewsletterDal, NewsletterDal>();
+    builder.Services.AddScoped<IReservationDal, ReservationDal>();
+    builder.Services.AddScoped<IRoomDal, RoomDal>();
+    builder.Services.AddScoped<ISliderDal, SliderDal>();
+    builder.Services.AddScoped<ITeamDal, TeamDal>();
+    builder.Services.AddScoped<ITestimonialDal, TestimonialDal>();
 
     // Proje Seviyesinde Authorize -----------------------------------------------------------------------------------------
     // builder.Services.AddMvc(config => 

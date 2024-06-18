@@ -1,19 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Concrete;
-using Data.EntityFramework;
+using Business.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.ViewComponents.Home
 {
     public class TestimonialViewComponent : ViewComponent
     {
-        TestimonialManager _testimonialManager = new TestimonialManager(new TestimonialDal());
+        private readonly ITestimonialService _testimonialService;
+        public TestimonialViewComponent(ITestimonialService testimonialService)
+        {
+            _testimonialService = testimonialService;
+        }
+
         public IViewComponentResult Invoke()
         {
-            var values = _testimonialManager.GetAll();
+            var values = _testimonialService.GetAll();
             return View(values);
         }
     }

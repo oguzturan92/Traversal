@@ -1,21 +1,21 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Concrete;
-using Data.EntityFramework;
+using Business.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.Areas.Admin.ViewComponents.Dashboard
 {
     public class Dashboard2Viewcomponent : ViewComponent
     {
-        DestinationManager _destinationManager = new DestinationManager(new DestinationDal());
-        ReservationManager _reservationManager = new ReservationManager(new ReservationDal());
+        private readonly IDestinationService _destinationService;
+        private readonly IReservationService _reservationService;
+        public Dashboard2Viewcomponent(IDestinationService destinationService, IReservationService reservationService)
+        {
+            _destinationService = destinationService;
+            _reservationService = reservationService;
+        }
         public IViewComponentResult Invoke()
         {
-            ViewBag.destinationCount = _destinationManager.GetAll().Count();
-            ViewBag.reservationCount = _reservationManager.GetAll().Count();
+            ViewBag.destinationCount = _destinationService.GetAll().Count();
+            ViewBag.reservationCount = _reservationService.GetAll().Count();
             return View();
         }
     }

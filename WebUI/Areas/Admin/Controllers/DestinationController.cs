@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Concrete;
-using Data.EntityFramework;
+using Business.Abstract;
 using Entity.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,12 +9,16 @@ namespace WebUI.Areas.Admin.Controllers
     [Authorize]
     public class DestinationController : Controller
     {
-        DestinationManager _destinationManager = new DestinationManager(new DestinationDal());
+        private readonly IDestinationService _destinationService;
+        public DestinationController(IDestinationService destinationService)
+        {
+            _destinationService = destinationService;
+        }
 
         public IActionResult DestinationList()
         {
             ViewBag.destinationActive = "active";
-            var values = _destinationManager.GetAll();
+            var values = _destinationService.GetAll();
             return View(values);
         }
 
@@ -33,7 +32,7 @@ namespace WebUI.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult DestinationCreate(Destination destination)
         {
-            _destinationManager.Create(destination);
+            _destinationService.Create(destination);
             TempData["icon"] = "success";
             TempData["text"] = "İşlem başarılı.";
             return RedirectToAction("DestinationList", "Destination");
@@ -43,14 +42,14 @@ namespace WebUI.Areas.Admin.Controllers
         public IActionResult DestinationUpdate(int id)
         {
             ViewBag.destinationActive = "active";
-            var value = _destinationManager.GetById(id);
+            var value = _destinationService.GetById(id);
             return View(value);
         }
 
         [HttpPost]
         public IActionResult DestinationUpdate(Destination destination)
         {
-            _destinationManager.Update(destination);
+            _destinationService.Update(destination);
             TempData["icon"] = "success";
             TempData["text"] = "İşlem başarılı.";
             return RedirectToAction("DestinationList", "Destination");
@@ -58,8 +57,8 @@ namespace WebUI.Areas.Admin.Controllers
 
         public IActionResult DestinationDelete(int id)
         {
-            var value = _destinationManager.GetById(id);
-            _destinationManager.Delete(value);
+            var value = _destinationService.GetById(id);
+            _destinationService.Delete(value);
             TempData["icon"] = "success";
             TempData["text"] = "İşlem başarılı.";
             return RedirectToAction("DestinationList", "Destination");

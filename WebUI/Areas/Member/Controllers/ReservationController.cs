@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Concrete;
-using Data.EntityFramework;
+using Business.Abstract;
 using Entity.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -15,19 +10,21 @@ namespace WebUI.Areas.Member.Controllers
     [Authorize]
     public class ReservationController : Controller
     {
-        DestinationManager _destinationManager = new DestinationManager(new DestinationDal());
-        ReservationManager _reservationManager = new ReservationManager(new ReservationDal());
+        private readonly IDestinationService _destinationService;
+        private readonly IReservationService _reservationService;
         private readonly UserManager<AppUser> _userManager;
-        public ReservationController(UserManager<AppUser> userManager)
+        public ReservationController(UserManager<AppUser> userManager, IDestinationService destinationService, IReservationService reservationService)
         {
             _userManager = userManager;
+            _destinationService = destinationService;
+            _reservationService = reservationService;
         }
 
         public async Task<IActionResult> ReservationList(string status)
         {
             ViewBag.reservationActive = "active";
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            var values = _reservationManager.ReservationsAndDestinationByUserId(user.Id, status);
+            var values = _reservationService.ReservationsAndDestinationByUserId(user.Id, status);
             return View(values);
         }
 
@@ -35,7 +32,7 @@ namespace WebUI.Areas.Member.Controllers
         public IActionResult ReservationCreate()
         {
             ViewBag.reservationActive = "active";
-            ViewBag.destinations = _destinationManager.GetAll();
+            ViewBag.destinations = _destinationService.GetAll();
             return View();
         }
 
@@ -45,7 +42,7 @@ namespace WebUI.Areas.Member.Controllers
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             reservation.AppUserId = user.Id;
             reservation.ReservationStatus = "BEKLİYOR";
-            _reservationManager.Create(reservation);
+            _reservationService.Create(reservation);
             TempData["icon"] = "success";
             TempData["text"] = "İşlem tamamlandı.";
             return RedirectToAction("ReservationList", "Reservation");

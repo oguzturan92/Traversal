@@ -1,19 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Concrete;
-using Data.EntityFramework;
+using Business.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.ViewComponents.Home
 {
     public class DestinationHomeViewComponent : ViewComponent
     {
-        DestinationManager _destinationManager = new DestinationManager(new DestinationDal());
+        private readonly IDestinationService _destinationService;
+        public DestinationHomeViewComponent(IDestinationService destinationService)
+        {
+            _destinationService = destinationService;
+        }
         public IViewComponentResult Invoke()
         {
-            var values = _destinationManager.GetAll();
+            var values = _destinationService.GetAll();
             return View(values);
         }
     }

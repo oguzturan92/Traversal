@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Concrete;
-using Data.EntityFramework;
+using Business.Abstract;
 using Entity.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,7 +6,11 @@ namespace WebUI.Controllers
 {
     public class DestinationController : Controller
     {
-        DestinationManager _destinationManager = new DestinationManager(new DestinationDal());
+        private readonly IDestinationService _destinationService;
+        public DestinationController(IDestinationService destinationService)
+        {
+            _destinationService = destinationService;
+        }
         
         public IActionResult Index()
         {
@@ -21,7 +20,7 @@ namespace WebUI.Controllers
         [HttpGet]
         public IActionResult DestinationDetail(int id)
         {
-            var value = _destinationManager.GetDestination(id);
+            var value = _destinationService.GetDestination(id);
             return View(value);
         }
 

@@ -1,20 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Concrete;
-using Data.EntityFramework;
+using Business.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.ViewComponents.Home
 {
     public class SliderViewComponent : ViewComponent
     {
-        // SliderManager _sliderManager = new SliderManager(new SliderDal());
+        private readonly ISliderService _sliderService;
+        public SliderViewComponent(ISliderService sliderService)
+        {
+            _sliderService = sliderService;
+        }
+
         public IViewComponentResult Invoke()
         {
-            // var values = _sliderManager.GetAll();
-            return View();
+            var values = _sliderService.GetAll();
+            return View(values);
         }
     }
 }
