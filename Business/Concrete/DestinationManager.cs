@@ -22,6 +22,11 @@ namespace Business.Concrete
             _destinationDal.Delete(entity);
         }
 
+        public List<Destination> DestinationAndReservationAndCommentCount()
+        {
+            return _destinationDal.DestinationAndReservationAndCommentCount();
+        }
+
         public List<Destination> GetAll()
         {
             return _destinationDal.GetAll();
@@ -32,9 +37,9 @@ namespace Business.Concrete
             return _destinationDal.GetById(id);
         }
 
-        public Destination GetDestination(int id)
+        public Destination GetDestinationAndComments(int id)
         {
-            return _destinationDal.GetDestination(id);
+            return _destinationDal.GetDestinationAndComments(id);
         }
 
         public void Update(Destination entity)

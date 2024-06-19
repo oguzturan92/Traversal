@@ -181,6 +181,9 @@ namespace Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<DateTime>("RegisterDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -454,6 +457,9 @@ namespace Data.Migrations
 
                     b.Property<string>("TeamInstagramUrl")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TeamStatus")
+                        .HasColumnType("bit");
 
                     b.Property<string>("TeamTwitterUrl")
                         .HasColumnType("nvarchar(max)");

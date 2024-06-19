@@ -23,10 +23,28 @@
                 <div class="mx-3">Turlar</div>
             </a>
         </li>
+        <li class="menu-item @ViewBag.teamActive">
+            <a asp-area="Admin" asp-controller="Team" asp-action="TeamList" class="menu-link">
+                <i class="fa-solid fa-people-group"></i>
+                <div class="mx-3">Rehberler</div>
+            </a>
+        </li>
+        <li class="menu-item @ViewBag.userActive">
+            <a asp-area="Admin" asp-controller="User" asp-action="UserList" class="menu-link">
+                <i class="fa-solid fa-users"></i>
+                <div class="mx-3">Kullanıcılar</div>
+            </a>
+        </li>
         <li class="menu-item @ViewBag.commentActive">
             <a asp-area="Admin" asp-controller="Comment" asp-action="CommentList" class="menu-link">
                 <i class="fa-solid fa-comment"></i>
                 <div class="mx-3">Yorumlar</div>
+            </a>
+        </li>
+        <li class="menu-item @ViewBag.downloadActive">
+            <a asp-area="Admin" asp-controller="Download" asp-action="Index" class="menu-link">
+                <i class="fa-solid fa-download"></i>
+                <div class="mx-3">İndirmeler</div>
             </a>
         </li>
         <li class="menu-item">

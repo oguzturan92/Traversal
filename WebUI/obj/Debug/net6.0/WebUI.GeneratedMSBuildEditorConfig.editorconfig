@@ -39,6 +39,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzdGluYXRpb25cRGVzdGluYXRpb25VcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Download/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRG93bmxvYWRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Reservation/ReservationList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzZXJ2YXRpb25cUmVzZXJ2YXRpb25MaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Shared/Components/Dashboard1/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGFzaGJvYXJkMVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -77,6 +85,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Team/TeamCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxUZWFtQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Team/TeamList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxUZWFtTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Team/TeamUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxUZWFtVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/User/UserCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxVc2VyQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/User/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxVc2VyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/User/UserUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxVc2VyVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/_ViewImports.cshtml]
@@ -137,6 +169,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/proje/Traversal/WebUI/Views/Destination/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGluYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Views/Error/Error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRXJyb3I0MDQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/Traversal/WebUI/Views/Home/Index.cshtml]

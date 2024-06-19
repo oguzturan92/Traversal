@@ -20,7 +20,7 @@ namespace WebUI.Controllers
         [HttpGet]
         public IActionResult DestinationDetail(int id)
         {
-            var value = _destinationService.GetDestination(id);
+            var value = _destinationService.GetDestinationAndComments(id);
             return View(value);
         }
 

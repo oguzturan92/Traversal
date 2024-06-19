@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>İndirmeler Listesi</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sıra No</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Dosya Adı</th>
+                                    <th colspan="1"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Tur Listesi Xlsx Formatı</td>
+                                    <td><a asp-area="Admin" asp-controller="Download" asp-action="ExelPage" class="btn btn-outline-warning">İNDİR</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Rehber Listesi Pdf Formatı</td>
+                                    <td><a asp-area="Admin" asp-controller="Download" asp-action="PdfPage" class="btn btn-outline-warning">İNDİR</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Tur Listesi Xlsx Formatı 2</td>
+                                    <td><a asp-area="Admin" asp-controller="Download" asp-action="ServiceExelPage" class="btn btn-outline-warning">İNDİR</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

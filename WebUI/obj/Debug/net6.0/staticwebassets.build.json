@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GOmr8rJ8Zj/ldrbsYJd1rBjM72JQ/fl7vMSsIB2Oziw=",
+  "Hash": "VeGisjnmiBIY9nIA/sBECJyZwy8hnrkem96OjaWjhYU=",
   "Source": "WebUI",
   "BasePath": "_content/WebUI",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\css\\error.css",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "css/error.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\error.css"
+    },
     {
       "Identity": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\css\\site.css",
       "SourceId": "WebUI",
@@ -1035,6 +1052,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\pdfreports\\team.pdf",
+      "SourceId": "WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\",
+      "BasePath": "_content/WebUI",
+      "RelativePath": "pdfreports/team.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pdfreports\\team.pdf"
     },
     {
       "Identity": "C:\\Users\\proje\\Traversal\\WebUI\\wwwroot\\Template\\css\\style-liberty.css",

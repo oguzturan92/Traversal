@@ -11,7 +11,9 @@ namespace Business.Validation
     {
         public TeamValidator()
         {
-            
+            RuleFor(i => i.TeamFullname).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.TeamDescription).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.TeamImage).NotEmpty().WithMessage("Boş geçilemez");
         }
     }
 }

@@ -1,52 +1,38 @@
-using Business.Abstract;
-using Business.Concrete;
-using Data.Abstract;
+using Business.Container;
 using Data.Concrete;
-using Data.EntityFramework;
 using Entity.Concrete;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+    // LOGLAMA START : Aldığımız hataları görebilmek için tutacağız. ------------------------------------------------------
+    // Burası açık olduğunda, proje run yapıldığında, started'de kalıyor ama prıje açılıyor.
+    // builder.Services.AddLogging(x =>
+    // {
+    //     x.ClearProviders();
+
+    //     // 1- Aoutput üzerinde gösterme ---------------------------
+    //         // Örnek çalışma Home/Index içinde yapıldı
+    //     x.SetMinimumLevel(LogLevel.Debug); // Debug'dan itibaren başlasın
+    //     x.AddDebug(); // Loglanacak yer (OutputTa)
+
+    //     // 2- Klasör oluşturup içinde text dosyasında tutacağız
+    //         // Nugget Ekle : dotnet add package Serilog.Extensions.Logging.File --version 3.0.0
+    //         // WebUI içinde otomatik olarak oluşturur
+    //     var path = Directory.GetCurrentDirectory();
+    //     x.AddFile($"{path}\\logs\\log.txt");
+    // });
+    // LOGLAMA FINISH ------------------------------------------------------
+
     // Identity kullanımı için - Start ------------------------------------------------------------------------------------
     builder.Services.AddDbContext<Context>();
     builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
 
-    // Injection için Configure İşlemleri ----------------------------------------------------------------------------------
-    builder.Services.AddScoped<IAboutService, AboutManager>();
-    builder.Services.AddScoped<IAboutItemService, AboutItemManager>();
-    builder.Services.AddScoped<IAddressService, AddressManager>();
-    builder.Services.AddScoped<IBannerService, BannerManager>();
-    builder.Services.AddScoped<ICommentService, CommentManager>();
-    builder.Services.AddScoped<IDestinationService, DestinationManager>();
-    builder.Services.AddScoped<IFeatureService, FeatureManager>();
-    builder.Services.AddScoped<IMessageService, MessageManager>();
-    builder.Services.AddScoped<INewsletterService, NewsletterManager>();
-    builder.Services.AddScoped<IReservationService, ReservationManager>();
-    builder.Services.AddScoped<IRoomService, RoomManager>();
-    builder.Services.AddScoped<ISliderService, SliderManager>();
-    builder.Services.AddScoped<ITeamService, TeamManager>();
-    builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
-
-    builder.Services.AddScoped<IAboutDal, AboutDal>();
-    builder.Services.AddScoped<IAboutItemDal, AboutItemDal>();
-    builder.Services.AddScoped<IAddressDal, AddressDal>();
-    builder.Services.AddScoped<IBannerDal, BannerDal>();
-    builder.Services.AddScoped<ICommentDal, CommentDal>();
-    builder.Services.AddScoped<IDestinationDal, DestinationDal>();
-    builder.Services.AddScoped<IFeatureDal, FeatureDal>();
-    builder.Services.AddScoped<IMessageDal, MessageDal>();
-    builder.Services.AddScoped<INewsletterDal, NewsletterDal>();
-    builder.Services.AddScoped<IReservationDal, ReservationDal>();
-    builder.Services.AddScoped<IRoomDal, RoomDal>();
-    builder.Services.AddScoped<ISliderDal, SliderDal>();
-    builder.Services.AddScoped<ITeamDal, TeamDal>();
-    builder.Services.AddScoped<ITestimonialDal, TestimonialDal>();
+    // Injection için Configure İşlemleri (Business/Container/Extensions içinde) ------------------------------------------------------
+    builder.Services.ContainerDependencies();
 
     // Proje Seviyesinde Authorize -----------------------------------------------------------------------------------------
     // builder.Services.AddMvc(config => 
@@ -59,19 +45,16 @@ builder.Services.AddControllersWithViews();
 
     // IDENTITY AYARLARI - 1
     builder.Services.Configure<IdentityOptions>(options => {
-
         // Şifre Ayarları
         options.Password.RequireDigit = false;
         options.Password.RequireLowercase = false;
         options.Password.RequireUppercase = false;
         // options.Password.RequiredLength = false; // Minimum karakter sayısı.
         options.Password.RequireNonAlphanumeric = false;
-
         // Kilitleme Ayarları
         options.Lockout.MaxFailedAccessAttempts = 5;
         options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
         options.Lockout.AllowedForNewUsers = true;
-
         // Mail Ayarları
         // options.User.AllowedUserNameCharacters = "";
         options.User.RequireUniqueEmail = true;
@@ -104,6 +87,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+    app.UseStatusCodePagesWithReExecute("/Error/Error404", "?code={0}");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

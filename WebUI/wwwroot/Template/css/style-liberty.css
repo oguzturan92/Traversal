@@ -17779,4 +17779,14 @@ h4.side-title {
 .validation-text {
 	color: #ff0000;
 	font-size: 14px;
+  display: block;
+}
+
+.validation-summary-text li {
+	color: #ff0000;
+	font-size: 14px;
+}
+.validation-summary-text ul {
+	padding: 0px;
+	list-style: none;
 }

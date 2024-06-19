@@ -25,5 +25,16 @@ namespace Data.EntityFramework
                                 .ToList();                
             }
         }
+
+        public List<Reservation> ReservationsByUserId(int userId)
+        {
+            using (var context = new Context())
+            {
+                return context.Reservations
+                                .Where(i => i.AppUserId == userId)
+                                .Include(i => i.Destination)
+                                .ToList();
+            }
+        }
     }
 }

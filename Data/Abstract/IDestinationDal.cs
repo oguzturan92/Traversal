@@ -4,6 +4,7 @@ namespace Data.Abstract
 {
     public interface IDestinationDal : IGenericDal<Destination>
     {
-        Destination GetDestination(int id);
+        Destination GetDestinationAndComments(int id);
+        List<Destination> DestinationAndReservationAndCommentCount();
     }
 }

@@ -13,5 +13,6 @@ namespace Entity.Concrete
         public string TeamImage { get; set; }
         public string TeamTwitterUrl { get; set; }
         public string TeamInstagramUrl { get; set; }
+        public bool TeamStatus { get; set; }
     }
 }

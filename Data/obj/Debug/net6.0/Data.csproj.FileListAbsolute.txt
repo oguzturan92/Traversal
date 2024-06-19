@@ -1,7 +1,6 @@
 C:\Users\proje\Traversal\Data\bin\Debug\net6.0\Data.deps.json
 C:\Users\proje\Traversal\Data\bin\Debug\net6.0\Data.runtimeconfig.json
 C:\Users\proje\Traversal\Data\bin\Debug\net6.0\Data.dll
-C:\Users\proje\Traversal\Data\bin\Debug\net6.0\ref\Data.dll
 C:\Users\proje\Traversal\Data\bin\Debug\net6.0\Data.pdb
 C:\Users\proje\Traversal\Data\bin\Debug\net6.0\Entity.dll
 C:\Users\proje\Traversal\Data\bin\Debug\net6.0\Entity.pdb
@@ -10,8 +9,9 @@ C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig
 C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
 C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
 C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
-C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.csproj.CopyComplete
 C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.dll
 C:\Users\proje\Traversal\Data\obj\Debug\net6.0\ref\Data.dll
 C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.pdb
 C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
+C:\Users\proje\Traversal\Data\bin\Debug\net6.0\ref\Data.dll
+C:\Users\proje\Traversal\Data\obj\Debug\net6.0\Data.csproj.CopyComplete

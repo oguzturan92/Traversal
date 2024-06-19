@@ -43,7 +43,13 @@ namespace WebUI.Controllers
                 {
                     TempData["icon"] = "success";
                     TempData["text"] = "Kullanıcı oluşturuldu.";
-                    return RedirectToAction("UserLogin", "User");
+                    if (model.IsLoginPageDirect)
+                    {
+                        return RedirectToAction("UserLogin", "User");
+                    } else
+                    {
+                        return RedirectToAction("UserList", "User", new { Area = "Admin"});
+                    }
                 } else
                 {
                     foreach (var item in result.Errors)

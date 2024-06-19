@@ -26,6 +26,7 @@ namespace WebUI.Models
         [Required(ErrorMessage = "Zorunlu alan.")]
         [Compare("Password", ErrorMessage = "Şifreler eşleşmiyor.")]
         public string RePassword { get; set; }
+        public bool IsLoginPageDirect { get; set; }
     }
 
     public class UserLoginModel

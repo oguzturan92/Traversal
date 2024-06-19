@@ -255,6 +255,7 @@ a:-moz-placeholder { /* Firefox 18- */
 .validation-text {
 	color: #ff0000;
 	font-size: 14px;
+  display: block;
 }
 
 .validation-summary-text li {

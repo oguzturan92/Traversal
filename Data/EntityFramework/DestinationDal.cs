@@ -8,7 +8,18 @@ namespace Data.EntityFramework
 {
     public class DestinationDal : GenericRepository<Destination>, IDestinationDal
     {
-        public Destination GetDestination(int id)
+        public List<Destination> DestinationAndReservationAndCommentCount()
+        {
+            using (var context = new Context())
+            {
+                return context.Destinations
+                                .Include(i => i.Reservations)
+                                .Include(i => i.Comments)
+                                .ToList();
+            }
+        }
+
+        public Destination GetDestinationAndComments(int id)
         {
             using (var context = new Context())
             {

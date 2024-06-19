@@ -37,6 +37,11 @@ namespace Business.Concrete
             return _reservationDal.ReservationsAndDestinationByUserId(userId, status);
         }
 
+        public List<Reservation> ReservationsByUserId(int userId)
+        {
+            return _reservationDal.ReservationsByUserId(userId);
+        }
+
         public void Update(Reservation entity)
         {
             _reservationDal.Update(entity);

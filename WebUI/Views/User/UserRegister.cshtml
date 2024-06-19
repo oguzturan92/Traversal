@@ -8,6 +8,7 @@
     <a asp-controller="Home" asp-action="Index" class="form-home-icon"><span class="fa-solid fa-house"></span></a>
     <h2>Kayıt Formu</h2>
     <div class="validation-summary-text" asp-validation-summary="ModelOnly"></div>
+    <input type="hidden" name="IsLoginPageDirect" value="true">
     <div class="form-row">
         <span class="validation-text" asp-validation-for="Name"></span>
         <label>Ad *</label>

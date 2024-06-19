@@ -1,0 +1,51 @@
+@model Team
+@{
+    ViewData["Title"] = "TeamUpdate";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Tur Düzenle</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form asp-area="Admin" asp-controller="Team" asp-action="TeamUpdate" method="post">
+                        <input type="hidden" asp-for="TeamId">
+                        <input type="hidden" asp-for="TeamStatus">
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="TeamFullname"></span>
+                            <label for="TeamFullname">Ad Soyad</label>
+                            <input type="text"asp-for="TeamFullname" id="TeamFullname" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="TeamDescription"></span>
+                            <label for="TeamDescription">Açıklama</label>
+                            <input type="text" asp-for="TeamDescription" id="TeamDescription" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="TeamImage"></span>
+                            <label for="TeamImage">Resim</label>
+                            <input type="text" asp-for="TeamImage" id="TeamImage" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="TeamTwitterUrl"></span>
+                            <label for="TeamTwitterUrl">Twitter</label>
+                            <input type="text" asp-for="TeamTwitterUrl" id="TeamTwitterUrl" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="TeamInstagramUrl"></span>
+                            <label for="TeamInstagramUrl">Instagram</label>
+                            <input type="text" asp-for="TeamInstagramUrl" id="TeamInstagramUrl" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary mt-4">Kaydet</button>
+                        <a asp-area="Admin" asp-controller="Team" asp-action="TeamList" class="btn btn-outline-dark mx-2 mt-4">Geri</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

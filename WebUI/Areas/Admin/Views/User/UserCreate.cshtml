@@ -1,0 +1,56 @@
+@model UserRegisterModel
+@{
+    ViewData["Title"] = "UserCreate";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Kullanıcı Oluştur</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form asp-area="" asp-controller="User" asp-action="UserRegister" method="post">
+                        <div class="validation-summary-text" asp-validation-summary="ModelOnly"></div>
+                        <input type="hidden" name="IsLoginPageDirect" value="false">
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Name"></span>
+                            <label for="Name">Ad *</label>
+                            <input type="text" asp-for="Name" id="Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Surname"></span>
+                            <label for="Surname">Soyad *</label>
+                            <input type="text" asp-for="Surname" id="Surname" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="UserName"></span>
+                            <label for="UserName">Kullanıcı Adı *</label>
+                            <input type="text" asp-for="UserName" id="UserName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Email"></span>
+                            <label for="Email">Email *</label>
+                            <input type="text" asp-for="Email" id="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Password"></span>
+                            <label for="Password">Şifre *</label>
+                            <input type="password" asp-for="Password" id="Password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="RePassword"></span>
+                            <label for="RePassword">Şifre Tekrar *</label>
+                            <input type="password" asp-for="RePassword" id="RePassword" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary mt-4">Kaydet</button>
+                        <a asp-area="Admin" asp-controller="User" asp-action="UserList" class="btn btn-outline-dark mx-2 mt-4">Geri</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
