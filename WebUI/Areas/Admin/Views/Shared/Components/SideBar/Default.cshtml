@@ -29,6 +29,12 @@
                 <div class="mx-3">Rehberler</div>
             </a>
         </li>
+        <li class="menu-item @ViewBag.roomActive">
+            <a asp-area="Admin" asp-controller="Room" asp-action="Index" class="menu-link">
+                <i class="fa-regular fa-square"></i>
+                <div class="mx-3">Odalar (AJAX)</div>
+            </a>
+        </li>
         <li class="menu-item @ViewBag.userActive">
             <a asp-area="Admin" asp-controller="User" asp-action="UserList" class="menu-link">
                 <i class="fa-solid fa-users"></i>
@@ -45,6 +51,12 @@
             <a asp-area="Admin" asp-controller="Download" asp-action="Index" class="menu-link">
                 <i class="fa-solid fa-download"></i>
                 <div class="mx-3">İndirmeler</div>
+            </a>
+        </li>
+        <li class="menu-item @ViewBag.mailActive">
+            <a asp-area="Admin" asp-controller="Mail" asp-action="MailCreate" class="menu-link">
+                <i class="fa-solid fa-envelopes-bulk"></i>
+                <div class="mx-3">Mail</div>
             </a>
         </li>
         <li class="menu-item">

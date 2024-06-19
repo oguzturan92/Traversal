@@ -1,0 +1,81 @@
+@model MailRequestModel
+@{
+    ViewData["Title"] = "MailCreate";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Mail Gönder</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form asp-area="Admin" asp-controller="Mail" asp-action="MailCreate" method="post">
+                        <h5>Gönderene Ait Bilgiler</h5>
+                        <div class="form-group">
+                            <span class="validation-text" id="validation-text" asp-validation-for="SenderName"></span>
+                            <label for="SenderName">Ad Soyad</label>
+                            <input type="text"asp-for="SenderName" id="SenderName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="SenderMail"></span>
+                            <label for="SenderMail">Mail</label>
+                            <input type="text" asp-for="SenderMail" id="SenderMail" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="SenderMailPassword"></span>
+                            <label for="SenderMailPassword">Şifre</label>
+                            <input type="text" asp-for="SenderMailPassword" id="SenderMailPassword" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="SenderMailHost"></span>
+                            <label for="SenderMailHost">Mail Host</label>
+                            <input type="text" asp-for="SenderMailHost" id="SenderMailHost" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="SenderMailPort"></span>
+                            <label for="SenderMailPort">Mail Port</label>
+                            <input type="text" asp-for="SenderMailPort" id="SenderMailPort" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="SenderMailEnableSSL"></span>
+                            <label for="SenderMailEnableSSL">EnableSSL</label>
+                            <select asp-for="SenderMailEnableSSL" id="SenderMailEnableSSL" class="form-control">
+                                <option selected disabled>Seçiniz</option>
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <h5>Alıcıya Ait Bilgiler</h5>
+                        <div class="form-group">
+                            <span class="validation-text" id="validation-text" asp-validation-for="ReceiverName"></span>
+                            <label for="ReceiverName">Ad Soyad</label>
+                            <input type="text"asp-for="ReceiverName" id="ReceiverName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="ReceiverMail"></span>
+                            <label for="ReceiverMail">Mail</label>
+                            <input type="text" asp-for="ReceiverMail" id="ReceiverMail" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Subject"></span>
+                            <label for="Subject">Konu</label>
+                            <input type="text" asp-for="Subject" id="Subject" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Body"></span>
+                            <label for="Body">Mail İçeriği</label>
+                            <input type="text" asp-for="Body" id="Body" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-4">Gönder</button>
+                        @* <a asp-area="Admin" asp-controller="Team" asp-action="TeamList" class="btn btn-outline-dark mx-2 mt-4">Geri</a> *@
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

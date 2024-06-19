@@ -1,0 +1,220 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Oda İşlemleri</h6>
+                    <hr>
+                </div>
+                <div class="card-header pb-0">
+                    <button type="button" id="button-list" class="btn btn-info">Oda Listesi</button>
+                    <button type="button" id="button-create-get" class="btn btn-success">Yeni Oda Ekle</button>
+                    <hr>
+                </div>
+                <div id="roomListHtml">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(window).ready(function () {
+        List();
+    });    
+
+    $("#button-list").click(function () {
+        List();
+    });
+
+    $("#button-create-get").click(function () {
+        let formHtml =   "<div class=card-body pt-0 p-4>"
+                            + "<form>"
+                                + "<div class=form-group>"
+                                    + "<span class='validation-text' asp-validation-for='RoomImage'></span>"
+                                    + "<label for='RoomImage'>Resim</label>"
+                                    + "<input type='text' asp-for='RoomImage' id='RoomImage' class='form-control'>"
+                                + "</div>"
+                                + "<div class=form-group>"
+                                    + "<span class='validation-text' asp-validation-for='RoomTitle'></span>"
+                                    + "<label for='RoomTitle'>Başlık</label>"
+                                    + "<input type='text' asp-for='RoomTitle' id='RoomTitle' class='form-control'>"
+                                + "</div>"
+                                + "<div class=form-group>"
+                                    + "<span class='validation-text' asp-validation-for='RoomSubTitle'></span>"
+                                    + "<label for='RoomSubTitle'>Alt Başlık</label>"
+                                    + "<input type='text' asp-for='RoomSubTitle' id='RoomSubTitle' class='form-control'>"
+                                + "</div>"
+                            + "</form>"
+                            + "<button type='button' id='button-create' class='btn btn-success mt-4'>Kaydet</button>"
+                        + "</div>" ;
+        $("#roomListHtml").html(formHtml);
+        Create();
+    });
+
+    function Create() {
+        $("#button-create").click(function () {
+            let value = {
+                RoomImage: $("#RoomImage").val(),
+                RoomTitle: $("#RoomTitle").val(),
+                RoomSubTitle: $("#RoomSubTitle").val()
+            };
+            
+            $.ajax({
+                type: "post",
+                url: "/Admin/Room/RoomCreate/",
+                data: value,
+                success: function (func) {
+                    let result = jQuery.parseJSON(func);
+                    List();
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        html: "Kayıt eklendi.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+    };
+
+    function GetById() {
+        $(".button-get").click(function () {
+            var id = this.value;
+
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/Admin/Room/RoomUpdate/" + id,
+                success: function (func) {
+                    let w = jQuery.parseJSON(func);
+                    let formHtml =   "<div class=card-body pt-0 p-4>"
+                                        + "<form>"
+                                            + `<input type='hidden' id='RoomId' value='${w.RoomId}'>`
+                                            + "<div class=form-group>"
+                                                + "<span class='validation-text' asp-validation-for='RoomImage'></span>"
+                                                + "<label for='RoomImage'>Resim</label>"
+                                                + `<input type='text' id='RoomImage' class='form-control' value='${w.RoomImage}'>`
+                                            + "</div>"
+                                            + "<div class=form-group>"
+                                                + "<span class='validation-text' asp-validation-for='RoomTitle'></span>"
+                                                + "<label for='RoomTitle'>Başlık</label>"
+                                                + `<input type='text' id='RoomTitle' class='form-control' value='${w.RoomTitle}'>`
+                                            + "</div>"
+                                            + "<div class=form-group>"
+                                                + "<span class='validation-text' asp-validation-for='RoomSubTitle'></span>"
+                                                + "<label for='RoomSubTitle'>Alt Başlık</label>"
+                                                + `<input type='text' id='RoomSubTitle' class='form-control' value='${w.RoomSubTitle}'>`
+                                            + "</div>"
+                                        + "</form>"
+                                        + "<button type='button' id='button-update' class='btn btn-success mt-4'>Güncelle</button>"
+                                    + "</div>" ;
+                    $("#roomListHtml").html(formHtml);
+                    Update();
+                }
+            });
+        });
+    };
+
+    function Update() {
+        $("#button-update").click(function () {
+            let value = {
+                RoomId: $("#RoomId").val(),
+                RoomImage: $("#RoomImage").val(),
+                RoomTitle: $("#RoomTitle").val(),
+                RoomSubTitle: $("#RoomSubTitle").val()
+            };
+            
+            $.ajax({
+                type: "post",
+                url: "/Admin/Room/RoomUpdate/",
+                data: value,
+                success: function (func) {
+                    let result = jQuery.parseJSON(func);
+                    List();
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        html: "Kayıt güncellendi.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+    };
+
+    function Delete() {
+        $(".button-delete").click(function () {
+            var id = this.value;
+
+            $.ajax({
+                type: "post",
+                url: "/Admin/Room/RoomDelete/" + id,
+                success: function (func) {
+                    let result = jQuery.parseJSON(func);
+                    List();
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        html: "Kayıt silindi.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+    };
+
+    function List() {
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "Get",
+            url: "/Admin/Room/RoomList/",
+            success: function (func) {
+                let w = jQuery.parseJSON(func);
+                let tableHtml = "<div class=card-body pt-0 pb-2>"
+                                    + "<div class=table-responsive p-0>"
+                                        + "<table class=table align-items-center mb-0>"
+                                            + "<tr>"
+                                                + "<th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'> Oda Id </th>"
+                                                + "<th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'> Oda Resim </th>"
+                                                + "<th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'> Oda Başlık </th>"
+                                                + "<th class='text-uppercase text-secondary text-xxs font-weight-bolder opacity-7'> Oda Alt Başlık </th>"
+                                                + "<th colspan=2></th>"
+                                            + "</tr>";
+
+                $.each(w, (index, value) => {
+                    tableHtml += `<tr>`
+                                    + `<td>  ${value.RoomId}  </td>`
+                                    + `<td>  ${value.RoomImage}  </td>`
+                                    + `<td>  ${value.RoomTitle}  </td>`
+                                    + `<td>  ${value.RoomSubTitle}  </td>`
+                                    + `<td><button class='btn btn-outline-warning button-get' value=${value.RoomId}>GÜNCELLE</button></td>`
+                                    + `<td><button class='btn btn-outline-danger button-delete' value=${value.RoomId}>SİL</button></td>`
+                                +`</tr>`
+                });
+
+                tableHtml +=        "</table>"
+                                + "</div>"
+                            + "</div>";
+                $("#roomListHtml").html(tableHtml);
+                GetById();
+                Delete();
+            }
+        });
+    };
+
+</script>

@@ -92,3 +92,6 @@ C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\itextsharp.dll
 C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\ref\WebUI.dll
 C:\Users\proje\Traversal\WebUI\obj\Debug\net6.0\WebUI.csproj.CopyComplete
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\MailKit.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\MimeKit.dll
