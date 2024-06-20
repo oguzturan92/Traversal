@@ -1,14 +1,15 @@
 using Business.Container;
 using Data.Concrete;
 using Entity.Concrete;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddFluentValidation(); // Business katmanındaki validasyonların WebUI katmanına yansıması için AddFluentValidation() metodu eklenmesi gerekiyor.
 
-    // LOGLAMA START : Aldığımız hataları görebilmek için tutacağız. ------------------------------------------------------
+    // LOGLAMA - START : Aldığımız hataları görebilmek için tutacağız. ------------------------------------------------------
     // Burası açık olduğunda, proje run yapıldığında, started'de kalıyor ama prıje açılıyor.
     // builder.Services.AddLogging(x =>
     // {
@@ -25,16 +26,21 @@ builder.Services.AddControllersWithViews();
     //     var path = Directory.GetCurrentDirectory();
     //     x.AddFile($"{path}\\logs\\log.txt");
     // });
-    // LOGLAMA FINISH ------------------------------------------------------
+    // LOGLAMA - FINISH ------------------------------------------------------
 
-    // Identity kullanımı için - Start ------------------------------------------------------------------------------------
-    builder.Services.AddDbContext<Context>();
-    builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
-
-    // Injection için Configure İşlemleri (Business/Container/Extensions içinde) ------------------------------------------------------
+    // INJECTION CONFIGURE - START (Business/Container/Extensions içinde) ------------------------------------------------------
     builder.Services.ContainerDependencies();
+    // INJECTION CONFIGURE - FINISH ------------------------------------------------------
 
-    // Proje Seviyesinde Authorize -----------------------------------------------------------------------------------------
+    // AUTO MAPPER - START ---------------------------------------------------------------------------------------------------
+    builder.Services.AddAutoMapper(typeof(Program));
+    // AUTO MAPPER - FINISH -----------------------------------------------------------------------------------------------------
+
+    // DTO VALIDATOR - START (Business/Container/Extensions içinde) -----------------------------------------------------
+    builder.Services.CustomerValidator();
+    // DTO VALIDATOR - FINISH -----------------------------------------------------------------------------------------------------
+
+    // PROJE SEVİYESİNDE AUTHORİZE - START --------------------------------------------------------------------------------
     // builder.Services.AddMvc(config => 
     // {
     //     var policy = new AuthorizationPolicyBuilder()
@@ -42,8 +48,14 @@ builder.Services.AddControllersWithViews();
     //     .Build();
     //     config.Filters.Add(new AuthorizeFilter(policy));
     // });
+    // PROJE SEVİYESİNDE AUTHORİZE - FINISH -------------------------------------------------------------------------------
 
-    // IDENTITY AYARLARI - 1
+    // IDENTITY - START ------------------------------------------------------------------------------------
+    builder.Services.AddDbContext<Context>();
+    builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
+    // IDENTITY - FINISH ------------------------------------------------------------------------------------
+
+    // IDENTITY AYARLARI - 1 - START ------------------------------------------------------------------------------------
     builder.Services.Configure<IdentityOptions>(options => {
         // Şifre Ayarları
         options.Password.RequireDigit = false;
@@ -61,14 +73,15 @@ builder.Services.AddControllersWithViews();
         options.SignIn.RequireConfirmedEmail = false;
         options.SignIn.RequireConfirmedPhoneNumber = false;
     });
+    // IDENTITY AYARLARI - 1 - FINISH ------------------------------------------------------------------------------------
 
-    // IDENTITY AYARLARI - 2
+    // IDENTITY AYARLARI - 2 - START ------------------------------------------------------------------------------------
     builder.Services.ConfigureApplicationCookie(options => {
         options.LoginPath = "/User/UserLogin";
         options.LogoutPath = "/User/Logout";
         options.AccessDeniedPath = "/User/UserLogin";
         options.SlidingExpiration = true;
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+        options.ExpireTimeSpan = TimeSpan.FromDays(30);
         options.Cookie = new CookieBuilder
         {
             HttpOnly = true,
@@ -76,7 +89,7 @@ builder.Services.AddControllersWithViews();
             SameSite = SameSiteMode.Strict
         };
     });
-    // Identity kullanımı için - Finish ------------------------------------------------------------------------------------
+    // IDENTITY AYARLARI - 2 - FINISH ------------------------------------------------------------------------------------
 
 var app = builder.Build();
 

@@ -8,10 +8,12 @@
     ".NETCoreApp,Version=v6.0": {
       "WebUI/1.0.0": {
         "dependencies": {
+          "AutoMapper": "13.0.1",
           "Business": "1.0.0",
           "Data": "1.0.0",
           "EPPlus": "7.2.0",
           "Entity": "1.0.0",
+          "FluentValidation.AspNetCore": "11.3.0",
           "MailKit": "4.6.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0",
           "Newtonsoft.Json": "13.0.3",
@@ -20,6 +22,17 @@
         },
         "runtime": {
           "WebUI.dll": {}
+        }
+      },
+      "AutoMapper/13.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/AutoMapper.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.0"
+          }
         }
       },
       "BouncyCastle/1.8.9": {
@@ -79,6 +92,30 @@
           "lib/net6.0/FluentValidation.dll": {
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.9.2.0"
+          }
+        }
+      },
+      "FluentValidation.AspNetCore/11.3.0": {
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "FluentValidation.DependencyInjectionExtensions": "11.5.1"
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.3.0.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/11.5.1": {
+        "dependencies": {
+          "FluentValidation": "11.9.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.5.1.0"
           }
         }
       },
@@ -905,6 +942,7 @@
       "Business/1.0.0": {
         "dependencies": {
           "Data": "1.0.0",
+          "Dto": "1.0.0",
           "EPPlus": "7.2.0",
           "Entity": "1.0.0",
           "FluentValidation": "11.9.2",
@@ -925,6 +963,11 @@
           "Data.dll": {}
         }
       },
+      "Dto/1.0.0": {
+        "runtime": {
+          "Dto.dll": {}
+        }
+      },
       "Entity/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0"
@@ -940,6 +983,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/Fx1SbJ16qS7dU4i604Sle+U9VLX+WSNVJggk6MupKVkYvvBm4XqYaeFuf67diHefHKHs50uQIS2YEDFhPCakQ==",
+      "path": "automapper/13.0.1",
+      "hashPath": "automapper.13.0.1.nupkg.sha512"
     },
     "BouncyCastle/1.8.9": {
       "type": "package",
@@ -982,6 +1032,20 @@
       "sha512": "sha512-XeHp9LvFvu1fsQ/NvDCymV02GOCB1nz7ZUhfpI3uMhCcHTkV1K5bMkv+Nc/kuNYyAsX5+5bcmUanIEMd5QN+Eg==",
       "path": "fluentvalidation/11.9.2",
       "hashPath": "fluentvalidation.11.9.2.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/11.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jtFVgKnDFySyBlPS8bZbTKEEwJZnn11rXXJ2SQnjDhZ56rQqybBg9Joq4crRLz3y0QR8WoOq4iE4piV81w/Djg==",
+      "path": "fluentvalidation.aspnetcore/11.3.0",
+      "hashPath": "fluentvalidation.aspnetcore.11.3.0.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iWM0LS1MDYX06pcjMEQKqHirl2zkjHlNV23mEJSoR1IZI7KQmTa0RcTtGEJpj5+iHvBCfrzP2mYKM4FtRKVb+A==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.5.1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512"
     },
     "iTextSharp/5.5.13.3": {
       "type": "package",
@@ -1570,6 +1634,11 @@
       "sha512": ""
     },
     "Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dto/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

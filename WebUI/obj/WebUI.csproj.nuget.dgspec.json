@@ -32,6 +32,9 @@
               "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
                 "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj"
               },
+              "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj": {
+                "projectPath": "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj"
+              },
               "C:\\Users\\proje\\Traversal\\Entity\\Entity.csproj": {
                 "projectPath": "C:\\Users\\proje\\Traversal\\Entity\\Entity.csproj"
               }
@@ -159,6 +162,61 @@
         }
       }
     },
+    "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj",
+        "projectName": "Dto",
+        "projectPath": "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj",
+        "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\proje\\Traversal\\Dto\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\oğuzhan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\proje\\Traversal\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -267,9 +325,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "EPPlus": {
               "target": "Package",
               "version": "[7.2.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
             },
             "MailKit": {
               "target": "Package",

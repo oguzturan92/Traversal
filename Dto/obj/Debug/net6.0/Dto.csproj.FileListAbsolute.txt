@@ -1,0 +1,12 @@
+C:\Users\proje\Traversal\Dto\bin\Debug\net6.0\Dto.deps.json
+C:\Users\proje\Traversal\Dto\bin\Debug\net6.0\Dto.dll
+C:\Users\proje\Traversal\Dto\bin\Debug\net6.0\ref\Dto.dll
+C:\Users\proje\Traversal\Dto\bin\Debug\net6.0\Dto.pdb
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\Dto.AssemblyInfoInputs.cache
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\Dto.AssemblyInfo.cs
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\Dto.csproj.CoreCompileInputs.cache
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\Dto.dll
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\ref\Dto.dll
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\Dto.pdb
+C:\Users\proje\Traversal\Dto\obj\Debug\net6.0\Dto.csproj.AssemblyReference.cache

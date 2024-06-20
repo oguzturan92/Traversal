@@ -100,6 +100,28 @@ namespace Data.Migrations
                     b.ToTable("Addresses");
                 });
 
+            modelBuilder.Entity("Entity.Concrete.Announcement", b =>
+                {
+                    b.Property<int>("AnnouncementId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnnouncementId"), 1L, 1);
+
+                    b.Property<string>("AnnouncementContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("AnnouncementDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AnnouncementTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AnnouncementId");
+
+                    b.ToTable("Announcements");
+                });
+
             modelBuilder.Entity("Entity.Concrete.AppRole", b =>
                 {
                     b.Property<int>("Id")
@@ -328,6 +350,9 @@ namespace Data.Migrations
 
                     b.Property<string>("MessageContent")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("MessageDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("MessageFullname")
                         .HasColumnType("nvarchar(max)");

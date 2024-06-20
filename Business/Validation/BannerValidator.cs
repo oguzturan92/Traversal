@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Entity.Concrete;
 using FluentValidation;
 
@@ -11,7 +7,9 @@ namespace Business.Validation
     {
         public BannerValidator()
         {
-            
+            RuleFor(i => i.BannerTitle).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.BannerDescription).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.BannerImage).NotEmpty().WithMessage("Boş geçilemez");
         }
     }
 }

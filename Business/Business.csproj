@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
     <ProjectReference Include="..\Entity\Entity.csproj" />
+    <ProjectReference Include="..\Dto\Dto.csproj" />
   </ItemGroup>
 
   <ItemGroup>

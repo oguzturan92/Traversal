@@ -12,5 +12,6 @@ namespace Entity.Concrete
         public string MessageMail { get; set; }
         public string MessageSubject { get; set; }
         public string MessageContent { get; set; }
+        public DateTime MessageDate { get; set; }
     }
 }

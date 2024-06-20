@@ -9,6 +9,7 @@
       "Business/1.0.0": {
         "dependencies": {
           "Data": "1.0.0",
+          "Dto": "1.0.0",
           "EPPlus": "7.2.0",
           "Entity": "1.0.0",
           "FluentValidation": "11.9.2",
@@ -742,6 +743,11 @@
           "Data.dll": {}
         }
       },
+      "Dto/1.0.0": {
+        "runtime": {
+          "Dto.dll": {}
+        }
+      },
       "Entity/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0"
@@ -1200,6 +1206,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dto/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

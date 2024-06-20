@@ -59,6 +59,18 @@
                 <div class="mx-3">Mail</div>
             </a>
         </li>
+        <li class="menu-item @ViewBag.announcementActive">
+            <a asp-area="Admin" asp-controller="Announcement" asp-action="AnnouncementList" class="menu-link">
+                <i class="fa-solid fa-flag"></i>
+                <div class="mx-3">Duyurular</div>
+            </a>
+        </li>
+        <li class="menu-item @ViewBag.messageActive">
+            <a asp-area="Admin" asp-controller="Message" asp-action="MessageList" class="menu-link">
+                <i class="fa-solid fa-message"></i>
+                <div class="mx-3">Mesajlar</div>
+            </a>
+        </li>
         <li class="menu-item">
             <a asp-area="" asp-controller="User" asp-action="UserLogout" class="menu-link">
                 <i class="fa-solid fa-arrow-right-from-bracket fa-flip-horizontal"></i>

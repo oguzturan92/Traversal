@@ -1,7 +1,10 @@
 using Business.Abstract;
 using Business.Concrete;
+using Business.Validation;
 using Data.Abstract;
 using Data.EntityFramework;
+using Dto.DTOs.AnnouncementDTOs;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Business.Container
@@ -13,6 +16,7 @@ namespace Business.Container
             services.AddScoped<IAboutService, AboutManager>();
             services.AddScoped<IAboutItemService, AboutItemManager>();
             services.AddScoped<IAddressService, AddressManager>();
+            services.AddScoped<IAnnouncementService, AnnouncementManager>();
             services.AddScoped<IAppUserService, AppUserManager>();
             services.AddScoped<IBannerService, BannerManager>();
             services.AddScoped<ICommentService, CommentManager>();
@@ -31,6 +35,7 @@ namespace Business.Container
             services.AddScoped<IAboutDal, AboutDal>();
             services.AddScoped<IAboutItemDal, AboutItemDal>();
             services.AddScoped<IAddressDal, AddressDal>();
+            services.AddScoped<IAnnouncementDal, AnnouncementDal>();
             services.AddScoped<IAppUserDal, AppUserDal>();
             services.AddScoped<IBannerDal, BannerDal>();
             services.AddScoped<ICommentDal, CommentDal>();
@@ -43,6 +48,12 @@ namespace Business.Container
             services.AddScoped<ISliderDal, SliderDal>();
             services.AddScoped<ITeamDal, TeamDal>();
             services.AddScoped<ITestimonialDal, TestimonialDal>();
+        }
+
+        public static void CustomerValidator(this IServiceCollection services)
+        {
+                services.AddTransient<IValidator<AnnouncementCreateDTO>, AnnouncementCreateValidator>();
+                services.AddTransient<IValidator<AnnouncementUpdateDTO>, AnnouncementUpdateValidator>();
         }
     }
 }

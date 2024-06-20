@@ -95,3 +95,9 @@ C:\Users\proje\Traversal\WebUI\obj\Debug\net6.0\WebUI.csproj.CopyComplete
 C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
 C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\MailKit.dll
 C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\MimeKit.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\Dto.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\Dto.pdb
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\proje\Traversal\WebUI\obj\Debug\net6.0\WebUI.MvcApplicationPartsAssemblyInfo.cs

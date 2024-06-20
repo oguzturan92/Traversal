@@ -33,6 +33,8 @@ namespace WebUI.Areas.Admin.Controllers
         {
             var value = _commentService.GetById(id);
             _commentService.Delete(value);
+            TempData["icon"] = "success";
+            TempData["text"] = "İşlem başarılı.";
             return RedirectToAction("CommentList", "Comment");
         }
 

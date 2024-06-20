@@ -936,6 +936,16 @@
           "bin/placeholder/Data.dll": {}
         }
       },
+      "Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dto.dll": {}
+        }
+      },
       "Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2812,6 +2822,11 @@
       "path": "../Data/Data.csproj",
       "msbuildProject": "../Data/Data.csproj"
     },
+    "Dto/1.0.0": {
+      "type": "project",
+      "path": "../Dto/Dto.csproj",
+      "msbuildProject": "../Dto/Dto.csproj"
+    },
     "Entity/1.0.0": {
       "type": "project",
       "path": "../Entity/Entity.csproj",
@@ -2821,6 +2836,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Data >= 1.0.0",
+      "Dto >= 1.0.0",
       "EPPlus >= 7.2.0",
       "Entity >= 1.0.0",
       "FluentValidation >= 11.9.2",
@@ -2858,6 +2874,9 @@
           "projectReferences": {
             "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
               "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj"
+            },
+            "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj": {
+              "projectPath": "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj"
             },
             "C:\\Users\\proje\\Traversal\\Entity\\Entity.csproj": {
               "projectPath": "C:\\Users\\proje\\Traversal\\Entity\\Entity.csproj"

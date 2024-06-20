@@ -11,7 +11,7 @@ namespace WebUI.Models
         [Required(ErrorMessage = "Zorunlu alan.")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Zorunlu alan.")]
+        [Required(ErrorMessage = "Zorunlu alan.")] 
         public string Surname { get; set; }
 
         [Required(ErrorMessage = "Zorunlu alan.")]
