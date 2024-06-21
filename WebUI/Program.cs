@@ -3,11 +3,17 @@ using Data.Concrete;
 using Entity.Concrete;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
+using WebUI.CQRS.Handlers.DestinationHandler;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddFluentValidation(); // Business katmanındaki validasyonların WebUI katmanına yansıması için AddFluentValidation() metodu eklenmesi gerekiyor.
+
+    // CQRS CONFIGURATION - START -----------------------------------------------------------------  
+    builder.Services.AddScoped<GetAllDestinationQueryHandler>();
+    builder.Services.AddScoped<GetDestinationGetByIdQueryHandler>();
+    // CQRS CONFIGURATION - FINISH -----------------------------------------------------------------    
 
     // LOGLAMA - START : Aldığımız hataları görebilmek için tutacağız. ------------------------------------------------------
     // Burası açık olduğunda, proje run yapıldığında, started'de kalıyor ama prıje açılıyor.

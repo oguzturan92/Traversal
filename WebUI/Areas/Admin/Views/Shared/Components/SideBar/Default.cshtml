@@ -23,6 +23,12 @@
                 <div class="mx-3">Turlar</div>
             </a>
         </li>
+        <li class="menu-item @ViewBag.destinationCQRSActive">
+            <a asp-area="Admin" asp-controller="DestinationCQRS" asp-action="DestinationCQRSList" class="menu-link">
+                <i class="fa-solid fa-globe"></i>
+                <div class="mx-3">Turlar CQRS</div>
+            </a>
+        </li>
         <li class="menu-item @ViewBag.teamActive">
             <a asp-area="Admin" asp-controller="Team" asp-action="TeamList" class="menu-link">
                 <i class="fa-solid fa-people-group"></i>
@@ -75,6 +81,12 @@
             <a asp-area="Admin" asp-controller="Message" asp-action="MessageList" class="menu-link">
                 <i class="fa-solid fa-message"></i>
                 <div class="mx-3">Mesajlar</div>
+            </a>
+        </li>
+        <li class="menu-item @ViewBag.rapidApiActive">
+            <a asp-area="Admin" asp-controller="RapidApiMovie" asp-action="Index" class="menu-link">
+                <i class="fa-solid fa-r"></i>
+                <div class="mx-3">Rapid Api</div>
             </a>
         </li>
         <li class="menu-item">

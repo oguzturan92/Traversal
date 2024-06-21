@@ -39,6 +39,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxDb21tZW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/DestinationCQRS/DestinationCQRSCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzdGluYXRpb25DUVJTXERlc3RpbmF0aW9uQ1FSU0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/DestinationCQRS/DestinationCQRSList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzdGluYXRpb25DUVJTXERlc3RpbmF0aW9uQ1FSU0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/DestinationCQRS/DestinationCQRSUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzdGluYXRpb25DUVJTXERlc3RpbmF0aW9uQ1FSU1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Destination/DestinationCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGVzdGluYXRpb25cRGVzdGluYXRpb25DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -65,6 +77,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Message/MessageList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWVzc2FnZVxNZXNzYWdlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/RapidApiMovie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmFwaWRBcGlNb3ZpZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Reservation/ReservationList.cshtml]
