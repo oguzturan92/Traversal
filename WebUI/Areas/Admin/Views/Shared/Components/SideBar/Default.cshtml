@@ -59,6 +59,12 @@
                 <div class="mx-3">Mail</div>
             </a>
         </li>
+        <li class="menu-item @ViewBag.visitorActive">
+            <a asp-area="Admin" asp-controller="Visitor" asp-action="VisitorList" class="menu-link">
+                <i class="fa-solid fa-eye"></i>
+                <div class="mx-3">Ziyaretçiler</div>
+            </a>
+        </li>
         <li class="menu-item @ViewBag.announcementActive">
             <a asp-area="Admin" asp-controller="Announcement" asp-action="AnnouncementList" class="menu-link">
                 <i class="fa-solid fa-flag"></i>

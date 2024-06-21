@@ -91,6 +91,10 @@ builder.Services.AddControllersWithViews().AddFluentValidation(); // Business ka
     });
     // IDENTITY AYARLARI - 2 - FINISH ------------------------------------------------------------------------------------
 
+    // API- HTTP CLIENT İÇİN - START ------------------------------------------------------------------------------------
+    builder.Services.AddHttpClient();
+    // API- HTTP CLIENT İÇİN - FINISH ------------------------------------------------------------------------------------
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
