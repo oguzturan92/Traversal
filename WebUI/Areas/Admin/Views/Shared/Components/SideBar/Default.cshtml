@@ -26,13 +26,19 @@
         <li class="menu-item @ViewBag.destinationCQRSActive">
             <a asp-area="Admin" asp-controller="DestinationCQRS" asp-action="DestinationCQRSList" class="menu-link">
                 <i class="fa-solid fa-globe"></i>
-                <div class="mx-3">Turlar CQRS</div>
+                <div class="mx-3">Turlar (CQRS)</div>
             </a>
         </li>
         <li class="menu-item @ViewBag.teamActive">
             <a asp-area="Admin" asp-controller="Team" asp-action="TeamList" class="menu-link">
                 <i class="fa-solid fa-people-group"></i>
                 <div class="mx-3">Rehberler</div>
+            </a>
+        </li>
+        <li class="menu-item @ViewBag.teamMediatRActive">
+            <a asp-area="Admin" asp-controller="TeamMediatR" asp-action="TeamMediatRList" class="menu-link">
+                <i class="fa-solid fa-people-group"></i>
+                <div class="mx-3">Rehberler (MEDIATR)</div>
             </a>
         </li>
         <li class="menu-item @ViewBag.roomActive">

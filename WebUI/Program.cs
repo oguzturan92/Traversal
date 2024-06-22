@@ -1,3 +1,4 @@
+using System.Reflection;
 using Business.Container;
 using Data.Concrete;
 using Entity.Concrete;
@@ -10,10 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddFluentValidation(); // Business katmanındaki validasyonların WebUI katmanına yansıması için AddFluentValidation() metodu eklenmesi gerekiyor.
 
-    // CQRS CONFIGURATION - START -----------------------------------------------------------------  
+    // CQRS CONFIGURATION - START ---------------------------------------------------------
     builder.Services.AddScoped<GetAllDestinationQueryHandler>();
     builder.Services.AddScoped<GetDestinationGetByIdQueryHandler>();
-    // CQRS CONFIGURATION - FINISH -----------------------------------------------------------------    
+    builder.Services.AddScoped<CreateDestinationCommandHandler>();
+    builder.Services.AddScoped<UpdateDestinationCommandHandler>();
+    builder.Services.AddScoped<RemoveDestinationCommandHandler>();
+    // CQRS CONFIGURATION - FINISH --------------------------------------------------------
+
+    // MEDIATR CONFIGURATION - START ------------------------------------------------------
+    builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+    // MEDIATR CONFIGURATION - FINISH -------------------------------------------------------
 
     // LOGLAMA - START : Aldığımız hataları görebilmek için tutacağız. ------------------------------------------------------
     // Burası açık olduğunda, proje run yapıldığında, started'de kalıyor ama prıje açılıyor.
@@ -38,13 +46,13 @@ builder.Services.AddControllersWithViews().AddFluentValidation(); // Business ka
     builder.Services.ContainerDependencies();
     // INJECTION CONFIGURE - FINISH ------------------------------------------------------
 
-    // AUTO MAPPER - START ---------------------------------------------------------------------------------------------------
+    // AUTO MAPPER - START ---------------------------------------------------------------
     builder.Services.AddAutoMapper(typeof(Program));
-    // AUTO MAPPER - FINISH -----------------------------------------------------------------------------------------------------
+    // AUTO MAPPER - FINISH --------------------------------------------------------------------------------------
 
-    // DTO VALIDATOR - START (Business/Container/Extensions içinde) -----------------------------------------------------
+    // DTO VALIDATOR - START (Business/Container/Extensions içinde) ----------------------
     builder.Services.CustomerValidator();
-    // DTO VALIDATOR - FINISH -----------------------------------------------------------------------------------------------------
+    // DTO VALIDATOR - FINISH ------------------------------------------------------------
 
     // PROJE SEVİYESİNDE AUTHORİZE - START --------------------------------------------------------------------------------
     // builder.Services.AddMvc(config => 
@@ -56,10 +64,10 @@ builder.Services.AddControllersWithViews().AddFluentValidation(); // Business ka
     // });
     // PROJE SEVİYESİNDE AUTHORİZE - FINISH -------------------------------------------------------------------------------
 
-    // IDENTITY - START ------------------------------------------------------------------------------------
+    // IDENTITY - START ----------------------------------------------------------------
     builder.Services.AddDbContext<Context>();
     builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
-    // IDENTITY - FINISH ------------------------------------------------------------------------------------
+    // IDENTITY - FINISH ---------------------------------------------------------------
 
     // IDENTITY AYARLARI - 1 - START ------------------------------------------------------------------------------------
     builder.Services.Configure<IdentityOptions>(options => {

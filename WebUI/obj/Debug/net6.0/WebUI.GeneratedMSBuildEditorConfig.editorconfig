@@ -131,6 +131,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/TeamMediatR/TeamMediatRCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbU1lZGlhdFJcVGVhbU1lZGlhdFJDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/TeamMediatR/TeamMediatRList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbU1lZGlhdFJcVGVhbU1lZGlhdFJMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/TeamMediatR/TeamMediatRUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbU1lZGlhdFJcVGVhbU1lZGlhdFJVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/proje/Traversal/WebUI/Areas/Admin/Views/Team/TeamCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbVxUZWFtQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

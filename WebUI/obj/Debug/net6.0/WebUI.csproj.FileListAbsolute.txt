@@ -101,3 +101,6 @@ C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\proje\Traversal\WebUI\obj\Debug\net6.0\WebUI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\MediatR.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\proje\Traversal\WebUI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

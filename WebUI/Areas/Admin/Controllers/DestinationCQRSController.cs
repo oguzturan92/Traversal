@@ -2,6 +2,7 @@ using Business.Abstract;
 using Entity.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebUI.CQRS.Commands.DestinationCommands;
 using WebUI.CQRS.Handlers.DestinationHandler;
 using WebUI.CQRS.Queries.DestinationQuery;
 
@@ -13,10 +14,16 @@ namespace WebUI.Areas.Admin.Controllers
     {
         private readonly GetAllDestinationQueryHandler _getAllDestinationQueryHandler;
         private readonly GetDestinationGetByIdQueryHandler _getDestinationGetByIdQueryHandler;
-        public DestinationCQRSController(GetAllDestinationQueryHandler getAllDestinationQueryHandler, GetDestinationGetByIdQueryHandler getDestinationGetByIdQueryHandler)
+        private readonly CreateDestinationCommandHandler _createDestinationCommandHandler;
+        private readonly UpdateDestinationCommandHandler _updateDestinationCommandHandler;
+        private readonly RemoveDestinationCommandHandler _removeDestinationCommandHandler;
+        public DestinationCQRSController(GetAllDestinationQueryHandler getAllDestinationQueryHandler, GetDestinationGetByIdQueryHandler getDestinationGetByIdQueryHandler, CreateDestinationCommandHandler createDestinationCommandHandler, RemoveDestinationCommandHandler removeDestinationCommandHandler, UpdateDestinationCommandHandler updateDestinationCommandHandler)
         {
             _getAllDestinationQueryHandler = getAllDestinationQueryHandler;
             _getDestinationGetByIdQueryHandler = getDestinationGetByIdQueryHandler;
+            _createDestinationCommandHandler = createDestinationCommandHandler;
+            _removeDestinationCommandHandler = removeDestinationCommandHandler;
+            _updateDestinationCommandHandler = updateDestinationCommandHandler;
         }
 
         public IActionResult DestinationCQRSList()
@@ -33,14 +40,14 @@ namespace WebUI.Areas.Admin.Controllers
             return View();
         }
 
-        // [HttpPost]
-        // public IActionResult DestinationCQRSCreate(DestinationCQRS destinationCQRS)
-        // {
-        //     _destinationCQRSService.Create(destinationCQRS);
-        //     TempData["icon"] = "success";
-        //     TempData["text"] = "İşlem başarılı.";
-        //     return RedirectToAction("DestinationCQRSList", "DestinationCQRS");
-        // }
+        [HttpPost]
+        public IActionResult DestinationCQRSCreate(CreateDestinationCommand command)
+        {
+            _createDestinationCommandHandler.Handle(command);
+            TempData["icon"] = "success";
+            TempData["text"] = "İşlem başarılı.";
+            return RedirectToAction("DestinationCQRSList", "DestinationCQRS");
+        }
 
         [HttpGet]
         public IActionResult DestinationCQRSUpdate(int id)
@@ -50,23 +57,22 @@ namespace WebUI.Areas.Admin.Controllers
             return View(value);
         }
 
-        // [HttpPost]
-        // public IActionResult DestinationCQRSUpdate(DestinationCQRS destinationCQRS)
-        // {
-        //     _destinationCQRSService.Update(destinationCQRS);
-        //     TempData["icon"] = "success";
-        //     TempData["text"] = "İşlem başarılı.";
-        //     return RedirectToAction("DestinationCQRSList", "DestinationCQRS");
-        // }
+        [HttpPost]
+        public IActionResult DestinationCQRSUpdate(UpdateDestinationCommand command)
+        {
+            _updateDestinationCommandHandler.Handle(command);
+            TempData["icon"] = "success";
+            TempData["text"] = "İşlem başarılı.";
+            return RedirectToAction("DestinationCQRSList", "DestinationCQRS");
+        }
 
-        // public IActionResult DestinationCQRSDelete(int id)
-        // {
-        //     var value = _destinationCQRSService.GetById(id);
-        //     _destinationCQRSService.Delete(value);
-        //     TempData["icon"] = "success";
-        //     TempData["text"] = "İşlem başarılı.";
-        //     return RedirectToAction("DestinationCQRSList", "DestinationCQRS");
-        // }
+        public IActionResult DestinationCQRSDelete(int id)
+        {
+            _removeDestinationCommandHandler.Handle(new RemoveDestinationCommand(id));
+            TempData["icon"] = "success";
+            TempData["text"] = "İşlem başarılı.";
+            return RedirectToAction("DestinationCQRSList", "DestinationCQRS");
+        }
 
     }
 }
