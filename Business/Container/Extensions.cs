@@ -1,8 +1,13 @@
 using Business.Abstract;
+using Business.Abstract.AbstractUOfWork;
 using Business.Concrete;
+using Business.Concrete.ConcreteUOfWork;
 using Business.Validation;
 using Data.Abstract;
+using Data.Abstract.AbstractUOfWork;
 using Data.EntityFramework;
+using Data.EntityFramework.EntityFrameworkUOfWork;
+using Data.UnitOfWork;
 using Dto.DTOs.AnnouncementDTOs;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
@@ -48,6 +53,12 @@ namespace Business.Container
             services.AddScoped<ISliderDal, SliderDal>();
             services.AddScoped<ITeamDal, TeamDal>();
             services.AddScoped<ITestimonialDal, TestimonialDal>();
+
+            //UnitOfWork  Registerları --------------------------------------------
+            services.AddScoped<IAccountUOfWorkService, AccountUOfWorkManager>();
+            services.AddScoped<IAccountUOfWorkDal, AccountUOfWorkDal>();
+
+            services.AddScoped<IUnitOfWorkDal, UnitOfWorkDal>();
         }
 
         public static void CustomerValidator(this IServiceCollection services)

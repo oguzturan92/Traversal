@@ -12,6 +12,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.homeActive = "active";
         // Output LOGLAMA --------------------------------------
         // sonuçları görmek için, debug modunda çalıştır ve console/hata ayıklama konsolu menüsünden çıktıyı görebiliriz
         // DateTime dateTime= DateTime.Now;

@@ -6,6 +6,7 @@ namespace WebUI.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.aboutActive = "active";
             return View();
         }
     }

@@ -13,6 +13,7 @@ namespace Data.Concrete
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<AboutItem> AboutItems { get; set; }
+        public DbSet<AccountUOfWork> AccountUOfWorks { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Announcement> Announcements { get; set; }
         public DbSet<Banner> Banners { get; set; }

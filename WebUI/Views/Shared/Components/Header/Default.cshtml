@@ -13,16 +13,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item @ViewBag.homeActive">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Ana Sayfa <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @ViewBag.aboutActive">
                         <a class="nav-link" asp-controller="About" asp-action="Index">Hakkımızda</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @ViewBag.destinationActive">
                         <a class="nav-link" asp-controller="Destination" asp-action="Index">Rotalar</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @ViewBag.contactActive">
                         <a class="nav-link" asp-controller="Contact" asp-action="Index">İletişim</a>
                     </li>
                     @if(User.Identity.IsAuthenticated)

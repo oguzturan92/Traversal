@@ -75,6 +75,25 @@ namespace Data.Migrations
                     b.ToTable("AboutItems");
                 });
 
+            modelBuilder.Entity("Entity.Concrete.AccountUOfWork", b =>
+                {
+                    b.Property<int>("AccountUOfWorkId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountUOfWorkId"), 1L, 1);
+
+                    b.Property<decimal>("AccountUOfWorkBalance")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("AccountUOfWorkFullname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AccountUOfWorkId");
+
+                    b.ToTable("AccountUOfWorks");
+                });
+
             modelBuilder.Entity("Entity.Concrete.Address", b =>
                 {
                     b.Property<int>("AddressId")

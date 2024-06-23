@@ -17,6 +17,12 @@
                 <div class="mx-3">Dashboard</div>
             </a>
         </li>
+        <li class="menu-item @ViewBag.accountUOfWorkActive">
+            <a asp-area="Admin" asp-controller="AccountUOfWork" asp-action="Index" class="menu-link">
+                <i class="fa-solid fa-money-bill"></i>
+                <div class="mx-3">Eft-Havale Uygulaması (UOfWork)</div>
+            </a>
+        </li>
         <li class="menu-item @ViewBag.destinationActive">
             <a asp-area="Admin" asp-controller="Destination" asp-action="DestinationList" class="menu-link">
                 <i class="fa-solid fa-globe"></i>

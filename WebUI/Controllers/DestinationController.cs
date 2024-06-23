@@ -14,6 +14,7 @@ namespace WebUI.Controllers
         
         public IActionResult Index()
         {
+            ViewBag.destinationActive = "active";
             return View();
         }
 
