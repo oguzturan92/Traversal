@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Dto.DTOs.AnnouncementDTOs;
+using Dto.DTOs.MessageDTOs;
+using Dto.DTOs.NewsletterDTOs;
 using Entity.Concrete;
 
 namespace WebUI.Mapping.AutoMapperProfile
@@ -15,6 +17,10 @@ namespace WebUI.Mapping.AutoMapperProfile
             CreateMap<Announcement, AnnouncementCreateDTO>().ReverseMap();
             CreateMap<Announcement, AnnouncementUpdateDTO>().ReverseMap();
             CreateMap<Announcement, AnnouncementListDTO>().ReverseMap();
+
+            CreateMap<Message, MessageCreateDTO>().ReverseMap();
+
+            CreateMap<Newsletter, NewsletterCreateDTO>().ReverseMap();
         }   
     }
 }

@@ -9,6 +9,8 @@ using Data.EntityFramework;
 using Data.EntityFramework.EntityFrameworkUOfWork;
 using Data.UnitOfWork;
 using Dto.DTOs.AnnouncementDTOs;
+using Dto.DTOs.MessageDTOs;
+using Dto.DTOs.NewsletterDTOs;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -19,7 +21,6 @@ namespace Business.Container
         public static void ContainerDependencies(this IServiceCollection services)
         {
             services.AddScoped<IAboutService, AboutManager>();
-            services.AddScoped<IAboutItemService, AboutItemManager>();
             services.AddScoped<IAddressService, AddressManager>();
             services.AddScoped<IAnnouncementService, AnnouncementManager>();
             services.AddScoped<IAppUserService, AppUserManager>();
@@ -38,7 +39,6 @@ namespace Business.Container
             services.AddScoped<ITestimonialService, TestimonialManager>();
 
             services.AddScoped<IAboutDal, AboutDal>();
-            services.AddScoped<IAboutItemDal, AboutItemDal>();
             services.AddScoped<IAddressDal, AddressDal>();
             services.AddScoped<IAnnouncementDal, AnnouncementDal>();
             services.AddScoped<IAppUserDal, AppUserDal>();
@@ -61,10 +61,14 @@ namespace Business.Container
             services.AddScoped<IUnitOfWorkDal, UnitOfWorkDal>();
         }
 
+        // Validator ile Dto'lar eşleştirilmesi
         public static void CustomerValidator(this IServiceCollection services)
         {
-                services.AddTransient<IValidator<AnnouncementCreateDTO>, AnnouncementCreateValidator>();
-                services.AddTransient<IValidator<AnnouncementUpdateDTO>, AnnouncementUpdateValidator>();
+            services.AddTransient<IValidator<AnnouncementCreateDTO>, AnnouncementCreateValidator>();
+            services.AddTransient<IValidator<AnnouncementUpdateDTO>, AnnouncementUpdateValidator>();
+
+            services.AddTransient<IValidator<MessageCreateDTO>, MessageValidator>();
+            services.AddTransient<IValidator<NewsletterCreateDTO>, NewsletterValidator>();
         }
     }
 }

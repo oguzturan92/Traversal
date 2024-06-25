@@ -9,5 +9,6 @@ namespace Entity.Concrete
     {
         public int NewsletterId { get; set; }
         public string NewsletterMail { get; set; }
+        public DateTime NewsletterDate { get; set; }
     }
 }

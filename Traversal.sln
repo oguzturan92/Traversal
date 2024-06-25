@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "WebUI\WebUI.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dto", "Dto\Dto.csproj", "{7EE95715-AF85-44CB-9C8D-6EB116873B65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRApi", "SignalRApi\SignalRApi.csproj", "{69A4B516-6CD2-4C75-B940-52F1EDFFEFB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7EE95715-AF85-44CB-9C8D-6EB116873B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EE95715-AF85-44CB-9C8D-6EB116873B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EE95715-AF85-44CB-9C8D-6EB116873B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A4B516-6CD2-4C75-B940-52F1EDFFEFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A4B516-6CD2-4C75-B940-52F1EDFFEFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A4B516-6CD2-4C75-B940-52F1EDFFEFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A4B516-6CD2-4C75-B940-52F1EDFFEFB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

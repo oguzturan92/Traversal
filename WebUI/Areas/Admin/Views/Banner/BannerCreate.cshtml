@@ -1,0 +1,39 @@
+@model Banner
+@{
+    ViewData["Title"] = "BannerCreate";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Banner Oluştur</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form asp-area="Admin" asp-controller="Banner" asp-action="BannerCreate" method="post">
+                        <div class="form-group">
+                            <span class="validation-text" id="validation-text" asp-validation-for="BannerTitle"></span>
+                            <label for="BannerTitle">Başlık</label>
+                            <input type="text"asp-for="BannerTitle" id="BannerTitle" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="BannerDescription"></span>
+                            <label for="BannerDescription">Açıklama</label>
+                            <input type="text" asp-for="BannerDescription" id="BannerDescription" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="BannerImage"></span>
+                            <label for="BannerImage">Resim</label>
+                            <input type="text" asp-for="BannerImage" id="BannerImage" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary mt-4">Kaydet</button>
+                        <a asp-area="Admin" asp-controller="Banner" asp-action="BannerList" class="btn btn-outline-dark mx-2 mt-4">Geri</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

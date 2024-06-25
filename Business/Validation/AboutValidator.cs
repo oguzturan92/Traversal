@@ -8,6 +8,10 @@ namespace Business.Validation
         public AboutValidator()
         {
             RuleFor(i => i.AboutTitle).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.AboutDescription).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.AboutImage).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.AboutTitle2).NotEmpty().WithMessage("Boş geçilemez");
+            RuleFor(i => i.AboutDescription2).NotEmpty().WithMessage("Boş geçilemez");
         }
     }
 }

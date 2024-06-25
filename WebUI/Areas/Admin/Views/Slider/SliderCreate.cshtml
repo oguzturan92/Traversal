@@ -1,0 +1,39 @@
+@model Slider
+@{
+    ViewData["Title"] = "SliderCreate";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Slider Oluştur</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form asp-area="Admin" asp-controller="Slider" asp-action="SliderCreate" method="post">
+                        <div class="form-group">
+                            <span class="validation-text" id="validation-text" asp-validation-for="SliderTitle"></span>
+                            <label for="SliderTitle">Başlık</label>
+                            <input type="text"asp-for="SliderTitle" id="SliderTitle" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="SliderSubTitle"></span>
+                            <label for="SliderSubTitle">Alt Başlık</label>
+                            <input type="text" asp-for="SliderSubTitle" id="SliderSubTitle" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="SliderImage"></span>
+                            <label for="SliderImage">Resim</label>
+                            <input type="text" asp-for="SliderImage" id="SliderImage" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary mt-4">Kaydet</button>
+                        <a asp-area="Admin" asp-controller="Slider" asp-action="SliderList" class="btn btn-outline-dark mx-2 mt-4">Geri</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

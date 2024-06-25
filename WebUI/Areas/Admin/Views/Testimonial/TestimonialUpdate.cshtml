@@ -1,0 +1,40 @@
+@model Testimonial
+@{
+    ViewData["Title"] = "TestimonialUpdate";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Deneyimleyen Düzenle</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form asp-area="Admin" asp-controller="Testimonial" asp-action="TestimonialUpdate" method="post">
+                        <input type="hidden" asp-for="TestimonialId">
+                        <div class="form-group">
+                            <span class="validation-text" id="validation-text" asp-validation-for="TestimonialFullname"></span>
+                            <label for="TestimonialFullname">Ad Soyad</label>
+                            <input type="text"asp-for="TestimonialFullname" id="TestimonialFullname" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="TestimonialComment"></span>
+                            <label for="TestimonialComment">Yorum</label>
+                            <input type="text" asp-for="TestimonialComment" id="TestimonialComment" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="TestimonialImage"></span>
+                            <label for="TestimonialImage">Resim</label>
+                            <input type="text" asp-for="TestimonialImage" id="TestimonialImage" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary mt-4">Kaydet</button>
+                        <a asp-area="Admin" asp-controller="Testimonial" asp-action="TestimonialList" class="btn btn-outline-dark mx-2 mt-4">Geri</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

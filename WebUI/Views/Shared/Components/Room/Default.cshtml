@@ -4,27 +4,31 @@
 {
     <div class="best-rooms py-5">
         <div class="container py-md-5">
+            <div class="title-content text-left mb-4">
+                <h6 class="sub-title">SEYEHATİNİ PLANLA</h6>
+                <h3 class="hny-title">Popüler Odalar</h3>
+            </div>
             <div class="ban-content-inf row">
                 <div class="maghny-gd-1 col-lg-6">
-                <div class="maghny-grid">
-                    <figure class="effect-lily border-radius  m-0">
-                        <img class="img-fluid" src="@Model[0].RoomImage" alt="" />
-                        <figcaption>
-                            <div>
-                                <h4>@Model[0].RoomTitle</h4>
-                                <p>@Model[0].RoomSubTitle </p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
+                    <div class="maghny-grid">
+                        <figure class="effect-lily border-radius  m-0">
+                            <img class="img-fluid" src="@Model[0].RoomImage" alt="" />
+                            <figcaption>
+                                <div>
+                                    <h4>@Model[0].RoomTitle</h4>
+                                    <p>@Model[0].RoomSubTitle </p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
                 <div class="maghny-gd-1 col-lg-6 mt-lg-0 mt-4">
-                    <div class="row">
+                    <div style="height: 100%;" class="row">
                         @for (int i=1; i<Model.Count(); i++)
                         {
                             <div class="maghny-gd-1 col-6 @(i == 3 || i == 4 ? "mt-4":"")">
-                                <div class="maghny-grid">
-                                    <figure class="effect-lily border-radius">
+                                <div style="height: 100%;" class="maghny-grid">
+                                    <figure style="height: 100%;" class="effect-lily border-radius">
                                         <img class="img-fluid" src="@Model[i].RoomImage" alt="" />
                                         <figcaption>
                                             <div>

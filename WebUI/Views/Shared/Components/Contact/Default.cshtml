@@ -1,0 +1,98 @@
+@model Address
+
+<!-- about breadcrumb -->
+<section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div class="container py-2">
+            <h2 class="title">İletişim</h2>
+            <ul class="breadcrumbs-custom-path mt-2">
+                <li><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> İletişim </li>
+            </ul>
+        </div>
+    </div>
+</section>
+  
+<!-- contact-form -->
+<section class="w3l-contact" id="contact">
+    <div class="contact-infubd py-5">
+        <div class="container py-lg-3">
+            <div class="contact-grids row">
+                <div class="col-lg-6 contact-left">
+                    <div class="partners">
+                        <div class="cont-details">
+                            <h5>İletişim</h5>
+                        </div>
+                        <div class="hours">
+                            <h6 class="mt-4">Email:</h6>
+                            <p> <a href="@Model.AddressMail">@Model.AddressMail</a></p>
+                            <h6 class="mt-4">Adres:</h6>
+                            <p>@Model.AddressContent</p>
+                            <h6 class="mt-4">İletişim:</h6>
+                            <p class="margin-top"><a href="tel:@Model.AddressPhone">@Model.AddressPhone</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5 contact-right">
+                    <form class="signin-form">
+                        <div class="input-grids">
+                            <div class="form-group">
+                                <input type="text" id="MessageFullname" placeholder="Ad Soyad *" class="contact-input" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="MessageMail" placeholder="Email*" class="contact-input" required="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="MessageSubject" placeholder="Konu*" class="contact-input" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="MessageContent" placeholder="Mesaj*" required=""></textarea>
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-style btn-primary" id="newMessage">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="map mt-5 pt-md-5">
+                <h5>Harita</h5>
+                <iframe
+                src="@Model.AddressUrl"
+                style="border:0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+        $("#newMessage").click(function () {
+            let value = {
+                MessageFullname: $("#MessageFullname").val(),
+                MessageMail: $("#MessageMail").val(),
+                MessageSubject: $("#MessageSubject").val(),
+                MessageContent: $("#MessageContent").val()
+            };
+            
+            $.ajax({
+                type: "post",
+                url: "/Contact/NewMessage/",
+                data: value,
+                success: function (func) {
+                    let result = jQuery.parseJSON(func);
+                    $("#MessageFullname").val("");
+                    $("#MessageMail").val("");
+                    $("#MessageSubject").val("");
+                    $("#MessageContent").val("");
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        html: "Mesajınız alındı.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+</script>

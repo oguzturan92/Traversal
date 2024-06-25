@@ -39,12 +39,12 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 column pl-lg-5 column4 mt-lg-0 mt-5">
-                        <h3>Newsletter </h3>
+                        <h3>Bülten </h3>
                         <div class="end-column">
                             <h4>Son gelişmelerden ve kampanyalarda haberdar olun</h4>
-                            <form action="#" class="subscribe" method="post">
-                                <input type="email" name="email" placeholder="Email Address" required="">
-                                <button type="submit">Go</button>
+                            <form class="subscribe">
+                                <input type="email" id="NewsletterMail" placeholder="Email" required="">
+                                <button id="newNewsletter" type="button">Go</button>
                             </form>
                             <p>Spam mail gönderilmez.</p>
                         </div>
@@ -108,3 +108,29 @@
 
     </section>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+        $("#newNewsletter").click(function () {
+            let value = {
+                NewsletterMail: $("#NewsletterMail").val()
+            };
+            
+            $.ajax({
+                type: "post",
+                url: "/Contact/NewNewsletter/",
+                data: value,
+                success: function (func) {
+                    let result = jQuery.parseJSON(func);
+                    $("#NewsletterMail").val("");
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        html: "Bülten kaydınız alındı.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
+</script>

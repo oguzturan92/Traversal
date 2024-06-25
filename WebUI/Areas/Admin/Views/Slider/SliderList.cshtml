@@ -1,0 +1,55 @@
+@model List<Slider>
+@{
+    ViewData["Title"] = "SliderList";
+    Layout = "_LayoutAdmin";
+    int count = 1;
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Slider Listesi</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        @if (Model.Any())
+                        {
+                            <table class="table align-items-center mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sıra No</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Resim</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ad Soyad</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Durum</th>
+                                        <th colspan="2"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@count</td>
+                                            <td><img style="width: 50px; height: 50px; border-radius: 100px;" src="@item.SliderImage" alt=""></td>
+                                            <td>@item.SliderTitle</td>
+                                            <td><a asp-area="Admin" asp-controller="Slider" asp-action="SliderUpdate" asp-route-id="@item.SliderId" class="btn btn-outline-warning">GÜNCELLE</a></td>
+                                            <td><a asp-area="Admin" asp-controller="Slider" asp-action="SliderDelete" asp-route-id="@item.SliderId" class="btn btn-outline-danger">SİL</a></td>
+                                        </tr>
+                                        count++;
+                                    }
+                                </tbody>
+                            </table>
+                        } else
+                        {
+                            <div class="alert alert-warning" role="alert">Henüz bir öge mevcut değil</div>
+                            <hr>
+                        }
+                        <a asp-area="Admin" asp-controller="Slider" asp-action="SliderCreate" class="btn btn-outline-info mt-4">SLİDER OLUŞTUR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

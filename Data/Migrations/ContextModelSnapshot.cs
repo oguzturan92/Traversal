@@ -50,31 +50,6 @@ namespace Data.Migrations
                     b.ToTable("Abouts");
                 });
 
-            modelBuilder.Entity("Entity.Concrete.AboutItem", b =>
-                {
-                    b.Property<int>("AboutItemId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutItemId"), 1L, 1);
-
-                    b.Property<string>("AboutItemDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AboutItemImage")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AboutItemTitle1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AboutItemTitle2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AboutItemId");
-
-                    b.ToTable("AboutItems");
-                });
-
             modelBuilder.Entity("Entity.Concrete.AccountUOfWork", b =>
                 {
                     b.Property<int>("AccountUOfWorkId")
@@ -394,6 +369,9 @@ namespace Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NewsletterId"), 1L, 1);
+
+                    b.Property<DateTime>("NewsletterDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("NewsletterMail")
                         .HasColumnType("nvarchar(max)");
