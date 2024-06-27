@@ -23,7 +23,6 @@ namespace SignalRApi.Controllers
         [HttpGet]
         public IActionResult VisitorCreate()
         {
-            int i = 0;
             Random random = new Random();
             Enumerable.Range(1, 10).ToList().ForEach(x => 
             {
@@ -33,7 +32,7 @@ namespace SignalRApi.Controllers
                     {
                         City = item,
                         CityVisitCount = random.Next(100,2000),
-                        VisitDate = DateTime.Now.AddDays(x)
+                        VisitDate = DateTime.Now.Date.AddDays(x)
                     };
                     _visitorServiceModel.SaveVisitor(newVisitor).Wait();
                     System.Threading.Thread.Sleep(1000);

@@ -7,10 +7,10 @@ using SignalRApi.Models;
 
 namespace SignalRApi.Hubs
 {
-    public class VisitorHub : Hub
+    public class VisitorHubNpg : Hub
     {
         private readonly VisitorServiceModel _visitorServiceModel;
-        public VisitorHub(VisitorServiceModel visitorServiceModel)
+        public VisitorHubNpg(VisitorServiceModel visitorServiceModel)
         {
             _visitorServiceModel = visitorServiceModel;
         }

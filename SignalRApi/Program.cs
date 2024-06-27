@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SignalRApi.DAL;
+using SignalRApi.Hubs;
 using SignalRApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,22 @@ builder.Services.AddSwaggerGen();
     builder.Services.AddDbContext<Context>();
     builder.Services.AddScoped<VisitorServiceModel>();
     builder.Services.AddSignalR();
+
+            // SignalRApi projesi, SignalRConsume klasöründe Consume edeceğiz. Bu metot, Api'yi Consume etmeye izin veriyor.
+    builder.Services.AddCors(options => options.AddPolicy("CorsPolicy",
+        builder => 
+        {
+            builder.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .SetIsOriginAllowed((host) => true)
+                    .AllowCredentials();
+        }));
+    // builder.Services.AddCors(options => options.AddDefaultPolicy( policy => policy
+    //     .AllowCredentials()
+    //     .AllowAnyHeader()
+    //     .AllowAnyMethod()
+    //     .SetIsOriginAllowed((host) => true)));
+
     AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior",true); // Tarih formatını, Npgsql formatında ayarlar
     // FINISH ---------------------------------------------------------
 
@@ -29,8 +46,19 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+    // START ---------------------------------------------------------
+    // app.UseCors();
+    app.UseCors("CorsPolicy");
+    // FINISH ---------------------------------------------------------
+
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseRouting();
+
+    // START ---------------------------------------------------------
+    app.MapHub<VisitorHubNpg>("/VisitorHubNpg");
+    // FINISH ---------------------------------------------------------
 
 app.Run();
