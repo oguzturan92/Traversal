@@ -1,7 +1,8 @@
 
-# Kurs Adı : Traversal
-# Kurs Eğitmeni : Murat YÜCEDAĞ
-# Kurs Platformu : Youtube
+# Kurs Bilgileri
+- Kurs Adı : Traversal
+- Kurs Eğitmeni : Murat YÜCEDAĞ
+- Kurs Platformu : Youtube
 
 # Proje Özellikleri
 - Repository Design Pattern
