@@ -1,0 +1,29 @@
+@model NewPasswordModel
+@{
+    ViewData["Title"] = "UserSifreYenile";
+    Layout = "_LayoutFormUser";
+}
+
+<form class="form-detail" asp-controller="User" asp-action="UserSifreYenile" method="post">
+    <a asp-controller="Home" asp-action="Index" class="form-home-icon"><span class="fa-solid fa-house"></span></a>
+    <h2>Şifremi Yenileme Formu</h2>
+    <div class="validation-summary-text" asp-validation-summary="ModelOnly"></div>
+    <input type="hidden" asp-for="userId">
+    <input type="hidden" asp-for="token">
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="Password"></span>
+        <label>Yeni Şifre *</label>
+        <input type="password" asp-for="Password" class="input-text" required>
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div class="form-row">
+        <span class="validation-text" asp-validation-for="RePassword"></span>
+        <label>Tekrar Yeni Şifre *</label>
+        <input type="password" asp-for="RePassword" class="input-text" required>
+        <i class="fas fa-envelope"></i>
+    </div>
+    <div class="form-row-last">
+        <input type="submit" name="register" class="register" value="Değiştir">
+    </div>
+    <a asp-controller="User" asp-action="UserLogin" style="font-size: 12px; padding: 0px; border: none;">Giriş Yap'a geri dön</a>
+</form>
