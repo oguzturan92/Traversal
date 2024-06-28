@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {}
+    "c:\\Users\\proje\\Traversal\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
+    "c:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj",
+        "projectUniqueName": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj",
+        "projectPath": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\proje\\Traversal\\Data\\obj\\",
+        "outputPath": "c:\\Users\\proje\\Traversal\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

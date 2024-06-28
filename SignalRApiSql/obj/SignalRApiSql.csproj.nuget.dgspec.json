@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj": {}
+    "c:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj": {}
   },
   "projects": {
-    "C:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj": {
+    "c:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj",
+        "projectUniqueName": "c:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj",
         "projectName": "SignalRApiSql",
-        "projectPath": "C:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj",
+        "projectPath": "c:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\proje\\Traversal\\SignalRApiSql\\obj\\",
+        "outputPath": "c:\\Users\\proje\\Traversal\\SignalRApiSql\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

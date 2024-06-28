@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj": {}
+    "c:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\proje\\Traversal\\Business\\Business.csproj": {
+    "c:\\Users\\proje\\Traversal\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\proje\\Traversal\\Business\\Business.csproj",
+        "projectUniqueName": "c:\\Users\\proje\\Traversal\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\proje\\Traversal\\Business\\Business.csproj",
+        "projectPath": "c:\\Users\\proje\\Traversal\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\proje\\Traversal\\Business\\obj\\",
+        "outputPath": "c:\\Users\\proje\\Traversal\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -29,8 +29,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj"
+              "c:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
+                "projectPath": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj"
               },
               "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj": {
                 "projectPath": "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj"
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
+    "c:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj",
+        "projectUniqueName": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj",
+        "projectPath": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\proje\\Traversal\\Data\\obj\\",
+        "outputPath": "c:\\Users\\proje\\Traversal\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -278,14 +278,14 @@
         }
       }
     },
-    "C:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj": {
+    "c:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj",
+        "projectUniqueName": "c:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj",
         "projectName": "WebUI",
-        "projectPath": "C:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj",
+        "projectPath": "c:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\proje\\Traversal\\WebUI\\obj\\",
+        "outputPath": "c:\\Users\\proje\\Traversal\\WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -303,11 +303,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\proje\\Traversal\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\proje\\Traversal\\Business\\Business.csproj"
+              "c:\\Users\\proje\\Traversal\\Business\\Business.csproj": {
+                "projectPath": "c:\\Users\\proje\\Traversal\\Business\\Business.csproj"
               },
-              "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj"
+              "c:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
+                "projectPath": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj"
               },
               "C:\\Users\\proje\\Traversal\\Entity\\Entity.csproj": {
                 "projectPath": "C:\\Users\\proje\\Traversal\\Entity\\Entity.csproj"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj": {}
+    "c:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj": {
+    "c:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj",
+        "projectUniqueName": "c:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj",
         "projectName": "SignalRApi",
-        "projectPath": "C:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj",
+        "projectPath": "c:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\proje\\Traversal\\SignalRApi\\obj\\",
+        "outputPath": "c:\\Users\\proje\\Traversal\\SignalRApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/MY8/4YDb2dXTifFROK8/Xfy7nlG83e+swWMIJJ0dgzdQqp2qgT/x7gfNIIVO/nBrxVzEJnc5IJhnUz9OHuMUQ==",
+  "dgSpecHash": "Ha+1OMk2WhCCzfmu6pMsS0zbtWf5cmVvOAAr/DuhoRaRAEtQIn8a+n5B1xXf/XnZJm+3Q3bb6oexVL8zMEoykg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj",
+  "projectFilePath": "c:\\Users\\proje\\Traversal\\WebUI\\WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oğuzhan\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",

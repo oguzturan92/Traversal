@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{0B93CA0C-2972-4B9C-950D-647D3E96B873}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "WebUI\WebUI.csproj", "{A6A22C6A-0580-4C9A-BEFA-9183D728A125}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dto", "Dto\Dto.csproj", "{7EE95715-AF85-44CB-9C8D-6EB116873B65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRApi", "SignalRApi\SignalRApi.csproj", "{69A4B516-6CD2-4C75-B940-52F1EDFFEFB4}"
@@ -18,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRConsume", "SignalRConsume\SignalRConsume.csproj", "{D7978FEB-5CF3-437B-A9FA-E2CDC39E948A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRApiSql", "SignalRApiSql\SignalRApiSql.csproj", "{D1DCFF84-B019-4EBF-AC54-26A79461E105}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{1FBB296E-41B1-4ACC-BCC0-EE4D0B20331F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{0B93CA0C-2972-4B9C-950D-647D3E96B873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B93CA0C-2972-4B9C-950D-647D3E96B873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B93CA0C-2972-4B9C-950D-647D3E96B873}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6A22C6A-0580-4C9A-BEFA-9183D728A125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6A22C6A-0580-4C9A-BEFA-9183D728A125}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6A22C6A-0580-4C9A-BEFA-9183D728A125}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6A22C6A-0580-4C9A-BEFA-9183D728A125}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7EE95715-AF85-44CB-9C8D-6EB116873B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7EE95715-AF85-44CB-9C8D-6EB116873B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EE95715-AF85-44CB-9C8D-6EB116873B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{D1DCFF84-B019-4EBF-AC54-26A79461E105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1DCFF84-B019-4EBF-AC54-26A79461E105}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1DCFF84-B019-4EBF-AC54-26A79461E105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FBB296E-41B1-4ACC-BCC0-EE4D0B20331F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FBB296E-41B1-4ACC-BCC0-EE4D0B20331F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FBB296E-41B1-4ACC-BCC0-EE4D0B20331F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FBB296E-41B1-4ACC-BCC0-EE4D0B20331F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

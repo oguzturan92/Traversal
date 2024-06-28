@@ -12,8 +12,8 @@ namespace SignalRApi.Models
     public class VisitorServiceModel
     {
         private readonly Context _context;
-        private readonly IHubContext<VisitorHub> _hubContext;
-        public VisitorServiceModel(Context context, IHubContext<VisitorHub> hubContext)
+        private readonly IHubContext<VisitorHubNpg> _hubContext;
+        public VisitorServiceModel(Context context, IHubContext<VisitorHubNpg> hubContext)
         {
             _context = context;
             _hubContext = hubContext;

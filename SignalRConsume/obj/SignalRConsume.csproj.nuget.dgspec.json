@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj": {}
+    "c:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj": {}
   },
   "projects": {
-    "C:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj": {
+    "c:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj",
+        "projectUniqueName": "c:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj",
         "projectName": "SignalRConsume",
-        "projectPath": "C:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj",
+        "projectPath": "c:\\Users\\proje\\Traversal\\SignalRConsume\\SignalRConsume.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\proje\\Traversal\\SignalRConsume\\obj\\",
+        "outputPath": "c:\\Users\\proje\\Traversal\\SignalRConsume\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

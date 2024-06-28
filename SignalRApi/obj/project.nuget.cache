@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5T14pCxuzjtilEM3u+AbBj92l2ar44VuNHmJBZt4/kyCYs6CL1NTM0xM4OXudcKamjzIc8Exx1uKp9YAdoWZUg==",
+  "dgSpecHash": "EbAyMpEFjtfpUF6ZejfB/e/+1vm32IwVTsOsaEq6h+eYvSkTxAE2l523IvY6P/97YNodmSum9qh1L19MKQY4jQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj",
+  "projectFilePath": "c:\\Users\\proje\\Traversal\\SignalRApi\\SignalRApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oğuzhan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",

@@ -1,0 +1,30 @@
+@model RoleModel
+@{
+    ViewData["Title"] = "RoleCreate";
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Rol Oluştur</h6>
+                    <hr>
+                </div>
+                <div class="card-body pt-0 p-4">
+                    <form asp-area="Admin" asp-controller="Role" asp-action="RoleCreate" method="post">
+                        <div class="validation-summary-text" asp-validation-summary="ModelOnly"></div>
+                        <div class="form-group">
+                            <span class="validation-text" asp-validation-for="Name"></span>
+                            <label for="Name">Ad *</label>
+                            <input type="text" asp-for="Name" id="Name" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary mt-4">Kaydet</button>
+                        <a asp-area="Admin" asp-controller="Role" asp-action="RoleList" class="btn btn-outline-dark mx-2 mt-4">Geri</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

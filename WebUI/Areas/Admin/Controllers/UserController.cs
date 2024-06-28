@@ -13,10 +13,12 @@ namespace WebUI.Areas.Admin.Controllers
     {
         private readonly IAppUserService _appUserService;
         private readonly UserManager<AppUser> _userManager;
-        public UserController(IAppUserService appUserService, UserManager<AppUser> userManager)
+        private readonly RoleManager<AppRole> _roleManager;
+        public UserController(IAppUserService appUserService, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _appUserService = appUserService;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         public IActionResult UserList()
@@ -36,15 +38,27 @@ namespace WebUI.Areas.Admin.Controllers
         // Post metodu, /User/UserCreate'e yönlendirildi
 
         [HttpGet]
-        public IActionResult UserUpdate(int id)
+        public async Task<IActionResult> UserUpdate(int id)
         {
             ViewBag.userActive = "active";
-            var value = _appUserService.GetById(id);
-            return View(value);
+            var user = _appUserService.GetById(id);
+            var model = new UserUpdateModel()
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Surname = user.Surname,
+                UserName = user.UserName,
+                PhoneNumber = user.PhoneNumber,
+                City = user.City,
+                Email = user.Email,
+                SeciliRoller = await _userManager.GetRolesAsync(user),
+                TumRoller = _roleManager.Roles.Select(i => i.Name)
+            };
+            return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> UserUpdate(UserUpdateModel model)
+        public async Task<IActionResult> UserUpdate(UserUpdateModel model, string[] seciliRoller)
         {
             var user = await _userManager.FindByIdAsync(model.Id.ToString());
             if (ModelState.IsValid)
@@ -58,6 +72,11 @@ namespace WebUI.Areas.Admin.Controllers
                 var result = await _userManager.UpdateAsync(user);
                 if (result.Succeeded)
                 {
+                    var userRoles = await _userManager.GetRolesAsync(user);
+                    seciliRoller = seciliRoller ?? new string[]{};
+                    await _userManager.AddToRolesAsync(user, seciliRoller.Except(userRoles).ToArray<string>());
+                    await _userManager.RemoveFromRolesAsync(user, userRoles.Except(seciliRoller).ToArray<string>());
+                    
                     TempData["icon"] = "success";
                     TempData["text"] = "İşlem başarılı.";
                     return RedirectToAction("UserUpdate", "User", new { Area = "Admin", id = model.Id });

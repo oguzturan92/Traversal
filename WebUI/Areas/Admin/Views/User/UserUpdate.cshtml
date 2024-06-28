@@ -1,4 +1,4 @@
-@model AppUser
+@model UserUpdateModel
 @{
     ViewData["Title"] = "UserUpdate";
     Layout = "_LayoutAdmin";
@@ -44,6 +44,16 @@
                             <span class="validation-text" asp-validation-for="UserName"></span>
                             <label for="UserName">Kullanıcı Adı * (Değişimi durumunda tekrar giriş gerekir)</label>
                             <input type="text" asp-for="UserName" id="UserName" class="form-control">
+                        </div>
+                        <div class="form-group ">
+                            <label>Rol Seçiniz</label>
+                            @foreach (var rolName in Model.TumRoller)
+                            {
+                                <div class="form-check mt-3">
+                                    <input type="checkbox" class="form-check-input" id="@rolName" name="SeciliRoller" value="@rolName" @(Model.SeciliRoller.Any(i => i == rolName) ? "checked" : "")>
+                                    <label for="@rolName" class="form-check-label">@rolName</label>
+                                </div>
+                            }
                         </div>
                         <button type="submit" class="btn btn-outline-primary mt-4">Kaydet</button>
                         <a asp-area="Admin" asp-controller="User" asp-action="UserList" class="btn btn-outline-dark mx-2 mt-4">Geri</a>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "udrpU/0kD8P4ZaC7uOxSceAZA07EV9fEKl/e51C63gJhvVJ6a56U2ANhhVPUFx8jyK1S0jW7P+LDqKYmPV2Zcw==",
+  "dgSpecHash": "6myqECJchtT4VoJIjHIu60mI5nBNEyGndMjQDX37aL18aQG4DABbfzJSpcYGdYlmiosNrUTPegVjJCgEnWv8mg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj",
+  "projectFilePath": "c:\\Users\\proje\\Traversal\\SignalRApiSql\\SignalRApiSql.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oğuzhan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.6\\microsoft.aspnetcore.connections.abstractions.6.0.6.nupkg.sha512",

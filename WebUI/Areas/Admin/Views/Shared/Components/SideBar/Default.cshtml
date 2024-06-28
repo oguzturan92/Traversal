@@ -83,6 +83,12 @@
                 <div class="mx-3">Kullanıcılar</div>
             </a>
         </li>
+        <li class="menu-item @ViewBag.roleActive">
+            <a asp-area="Admin" asp-controller="Role" asp-action="RoleList" class="menu-link">
+                <i class="fa-solid fa-masks-theater"></i>
+                <div class="mx-3">Roller</div>
+            </a>
+        </li>
         <li class="menu-item @ViewBag.commentActive">
             <a asp-area="Admin" asp-controller="Comment" asp-action="CommentList" class="menu-link">
                 <i class="fa-solid fa-comment"></i>
