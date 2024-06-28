@@ -50,5 +50,5 @@
 # Admin Mail Gönderme Sayfası
 ![Ekran görüntüsü 2024-06-29 002214](https://github.com/oguzturan92/Traversal/assets/157590022/38a5564b-8994-4829-8fbe-8a48cace3fe9)
 
-#SignalR
+# SignalR
 https://github.com/oguzturan92/Traversal/assets/157590022/e004fab4-8bac-442f-937f-0d6b95cef7e2
