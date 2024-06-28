@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\proje\\Traversal\\Business\\Business.csproj": {}
+    "C:\\Users\\proje\\Traversal\\Business\\Business.csproj": {}
   },
   "projects": {
-    "c:\\Users\\proje\\Traversal\\Business\\Business.csproj": {
+    "C:\\Users\\proje\\Traversal\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\proje\\Traversal\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\proje\\Traversal\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "c:\\Users\\proje\\Traversal\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\proje\\Traversal\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\proje\\Traversal\\Business\\obj\\",
+        "outputPath": "C:\\Users\\proje\\Traversal\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -29,8 +29,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
-                "projectPath": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj"
+              "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj"
               },
               "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj": {
                 "projectPath": "C:\\Users\\proje\\Traversal\\Dto\\Dto.csproj"
@@ -83,14 +83,14 @@
         }
       }
     },
-    "c:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
+    "C:\\Users\\proje\\Traversal\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "c:\\Users\\proje\\Traversal\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\proje\\Traversal\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\oğuzhan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\proje\\Traversal\\Data\\obj\\",
+        "outputPath": "C:\\Users\\proje\\Traversal\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

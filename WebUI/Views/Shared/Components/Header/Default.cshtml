@@ -45,7 +45,10 @@
                 </ul>
             </div>
             <div class="d-lg-block d-none">
-                <a asp-controller="Contact" asp-action="Index" class="btn btn-style btn-secondary">Mesaj Formu</a>
+                <form asp-controller="Destination" asp-action="Index" method="get" style="position: relative;">
+                    <i class="fa-solid fa-magnifying-glass" style="position: absolute; top: 10px; left: -25px;"></i>
+                    <input type="text" name="search" class="form-control" placeholder="Şehir arayınız...">
+                </form>
             </div>
             <div class="mobile-position">
                 <nav class="navigation">

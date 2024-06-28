@@ -23,6 +23,23 @@
         },
         "runtime": {
           "WebUI.dll": {}
+        },
+        "resources": {
+          "de/WebUI.resources.dll": {
+            "locale": "de"
+          },
+          "en/WebUI.resources.dll": {
+            "locale": "en"
+          },
+          "es/WebUI.resources.dll": {
+            "locale": "es"
+          },
+          "fr/WebUI.resources.dll": {
+            "locale": "fr"
+          },
+          "tr/WebUI.resources.dll": {
+            "locale": "tr"
+          }
         }
       },
       "AutoMapper/13.0.1": {

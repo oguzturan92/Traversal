@@ -25,11 +25,11 @@
 
 <body class="g-sidenav-show bg-gray-100">
 
-    @await Component.InvokeAsync("WebUI.Areas.Member.ViewComponents.SideBar")
+    @await Component.InvokeAsync("WebUI.Areas.Member.ViewComponents.SideBarMember")
 
     <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
         
-        @await Component.InvokeAsync("WebUI.Areas.Member.ViewComponents.Navbar")
+        @await Component.InvokeAsync("WebUI.Areas.Member.ViewComponents.NavbarMember")
 
         @RenderBody()
 

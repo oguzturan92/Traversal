@@ -1,0 +1,8 @@
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_LayoutMember.cshtml";
+}
+
+<h1>@localizer["Merhaba"]</h1>
+@* https://localhost:7180/Information/Index/?culture= *@

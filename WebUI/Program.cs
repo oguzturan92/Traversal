@@ -4,6 +4,7 @@ using Data.Concrete;
 using Entity.Concrete;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Razor;
 using WebUI.CQRS.Handlers.DestinationHandler;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -109,6 +110,15 @@ builder.Services.AddControllersWithViews().AddFluentValidation(); // Business ka
     builder.Services.AddHttpClient();
     // API- HTTP CLIENT İÇİN - FINISH ------------------------------------------------------------------------------------
 
+    // LOCALIZATION - START --------------------------------------------------------------------------------------------------
+    builder.Services.AddLocalization(opt => 
+    {
+        opt.ResourcesPath = "Resources";
+    });
+    builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
+    // LOCALIZATION - FINISH --------------------------------------------------------------------------------------------------
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -129,6 +139,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+    // LOCALIZATION - START --------------------------------------------------------------------------------------------------
+    var supportedCultures = new [] {"en","fr","es","gr","tr","de"};
+    var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[4]).AddSupportedCultures(supportedCultures).AddSupportedUICultures(supportedCultures);
+    app.UseRequestLocalization(localizationOptions);
+    // LOCALIZATION - FINISH --------------------------------------------------------------------------------------------------
+    
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(

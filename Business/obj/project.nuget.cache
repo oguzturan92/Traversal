@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "te0sEPMN2y1Snsn8OfD26chrpJc4/FklbfCsK8Wu6hw2+Bwn+rb6Zc3kgX+RJKFMDT4RzZiAcIjue+bB5QFFOQ==",
+  "dgSpecHash": "UYKUS2hmqpvhSA/vL8X9/Q8wEN9gmunyZGW5AD7E+1UFyqjwS2js/DMMlojYWr68+/Vn4yVQZDpMNpmTtNJrBQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\proje\\Traversal\\Business\\Business.csproj",
+  "projectFilePath": "C:\\Users\\proje\\Traversal\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oğuzhan\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\oğuzhan\\.nuget\\packages\\epplus\\7.2.0\\epplus.7.2.0.nupkg.sha512",

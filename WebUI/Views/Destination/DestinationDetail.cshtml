@@ -56,7 +56,9 @@
             <div class="single-post-content">
                 
                 <!-- BLOG DETAIL     -->
-                <p>@Model.DestinationDescription</p>
+                <div class="single-post-content">
+                    @Html.Raw(Model.DestinationDescription)
+                </div>
 
                 <!-- TAG LİST -->
                 <div class="d-grid left-right mt-5 pb-md-5">
@@ -67,17 +69,17 @@
                         <a href="#blog-tag">Hotel</a>
                         <a href="#blog-tag">Food</a>
                     </div>
-                    <div class="buttons-singles">
+                    @* <div class="buttons-singles">
                         <h4>Share :</h4>
                         <a href="#blog-share"><span class="fa fa-facebook" aria-hidden="true"></span></a>
                         <a href="#blog-share"><span class="fa fa-twitter" aria-hidden="true"></span></a>
                         <a href="#blog-share"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
                         <a href="#blog-share"><span class="fa fa-pinterest-p" aria-hidden=" true"></span></a>
-                    </div>
+                    </div> *@
                 </div>
 
                 <!-- YAZAR KARTI -->
-                <div class="author-card mt-5">
+                @* <div class="author-card mt-5">
                     <div class="row align-items-center">
                         <div class="col-sm-3 col-6">
                             <div>
@@ -106,7 +108,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> *@
                 
                 <!-- COMMENT -->
                 @if (Model.Comments.Count() > 0)

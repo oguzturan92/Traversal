@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <span class="validation-text" asp-validation-for="DestinationDescription"></span>
                             <label for="DestinationDescription">Açıklama</label>
-                            <input type="text" asp-for="DestinationDescription" id="DestinationDescription" class="form-control">
+                            <textarea asp-for="DestinationDescription" id="CkEditor" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             <span class="validation-text" asp-validation-for="DestinationStatus"></span>
@@ -61,3 +61,11 @@
         </div>
     </div>
 </div>
+
+@section Scripts
+{
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'CkEditor' );
+    </script>
+}

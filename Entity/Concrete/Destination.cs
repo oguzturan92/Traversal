@@ -13,6 +13,7 @@ namespace Entity.Concrete
         public double DestinationPrice { get; set; }
         public string DestinationImage { get; set; }
         public string DestinationDescription { get; set; }
+        public string DestinationSubTitle { get; set; }
         public bool DestinationStatus { get; set; }
         public int DestinationCapacity { get; set; }
         public List<Comment> Comments { get; set; }

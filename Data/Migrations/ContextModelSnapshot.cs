@@ -307,6 +307,9 @@ namespace Data.Migrations
                     b.Property<bool>("DestinationStatus")
                         .HasColumnType("bit");
 
+                    b.Property<string>("DestinationSubTitle")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("DestinationId");
 
                     b.ToTable("Destinations");

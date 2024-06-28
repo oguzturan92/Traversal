@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebUI.Areas.Member.ViewComponents
 {
-    public class SideBarViewComponent : ViewComponent
+    public class SideBarMemberViewComponent : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

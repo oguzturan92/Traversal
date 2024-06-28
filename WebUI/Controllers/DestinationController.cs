@@ -12,10 +12,16 @@ namespace WebUI.Controllers
             _destinationService = destinationService;
         }
         
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Index(string search)
         {
             ViewBag.destinationActive = "active";
-            return View();
+            var values = _destinationService.GetAll();
+            if (!string.IsNullOrEmpty(search))
+            {
+                values = _destinationService.GetAll().Where(i => i.DestinationCity.ToLower().Contains(search.ToLower())).ToList();
+            }
+            return View(values);
         }
 
         [HttpGet]

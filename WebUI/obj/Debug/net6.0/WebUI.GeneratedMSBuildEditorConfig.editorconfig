@@ -263,6 +263,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Information/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXEluZm9ybWF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Profile/ProfileIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFByb2ZpbGVcUHJvZmlsZUluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -275,8 +279,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFJlc2VydmF0aW9uXFJlc2VydmF0aW9uTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Shared/Components/Navbar/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXE5hdmJhclxEZWZhdWx0LmNzaHRtbA==
+[C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Shared/Components/NavbarMember/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXE5hdmJhck1lbWJlclxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Shared/Components/ProfileInfo/Default.cshtml]
@@ -291,8 +295,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFByb2ZpbGVUZWFtXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Shared/Components/SideBar/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFNpZGVCYXJcRGVmYXVsdC5jc2h0bWw=
+[C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Shared/Components/SideBarMember/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWVtYmVyXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFNpZGVCYXJNZW1iZXJcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/Traversal/WebUI/Areas/Member/Views/Shared/_LayoutMember.cshtml]
@@ -327,6 +331,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/proje/Traversal/WebUI/Views/Information/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5mb3JtYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/proje/Traversal/WebUI/Views/Shared/Components/About/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWJvdXRcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -341,10 +349,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/proje/Traversal/WebUI/Views/Shared/Components/DestinationHome/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGVzdGluYXRpb25Ib21lXERlZmF1bHQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/proje/Traversal/WebUI/Views/Shared/Components/Destination/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGVzdGluYXRpb25cRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/Traversal/WebUI/Views/Shared/Components/Footer/Default.cshtml]
